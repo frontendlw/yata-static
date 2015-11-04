@@ -1,0 +1,1252 @@
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+/* line 1, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_helper-classes.sass */
+.cs-float-l, .cs-group-btn [class*="cs-btn"] {
+  float: left; }
+
+/* line 4, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_helper-classes.sass */
+.cs-float-r {
+  float: right; }
+
+/* line 7, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_helper-classes.sass */
+.cs-float-n {
+  float: none; }
+
+/* line 10, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_helper-classes.sass */
+.cs-clearfix:after, .cs-group-btn:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+/* line 15, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_helper-classes.sass */
+.cs-inline-block {
+  display: inline-block; }
+
+/* line 18, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_helper-classes.sass */
+.cs-inline {
+  display: inline; }
+
+/* line 21, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_helper-classes.sass */
+.cs-block {
+  display: block; }
+
+/* line 24, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_helper-classes.sass */
+.cs-center {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  float: none !important; }
+
+/* line 30, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_helper-classes.sass */
+.cs-replace {
+  display: block;
+  border: none;
+  overflow: hidden;
+  text-indent: -9999px;
+  word-spacing: 999px; }
+
+/* line 37, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_helper-classes.sass */
+.cs-list, .cs-list li, .cs-list-auto, .cs-list-auto li {
+  width: 100%;
+  float: left;
+  display: block; }
+
+/* line 49, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_helper-classes.sass */
+.cs-list-auto, .cs-list-auto li {
+  width: auto; }
+
+/* line 1, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_placeholder.sass */
+[class*="cs-btn"], .cs-topbar .cs-logo a, .cs-sidebar .cs-title {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased; }
+
+/* line 6, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_placeholder.sass */
+.cs-group-btn input, input[id*="cs-sidebar-nav-"], input[id*="cs-sidebar-toggle-"], input[id="cs-themes"], .cs-theme-colors input[id*="cs-theme-color-"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+/* line 16, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_placeholder.sass */
+[class*="cs-btn"].cs-active, .cs-group-btn input:checked + [class*="cs-btn"] {
+  box-shadow: inset 0 4px 5px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  font-size: 14px; }
+
+/* line 21, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_placeholder.sass */
+.cs-btn-primary.cs-active, .cs-group-btn input:checked + .cs-btn-primary {
+  background: #018ab4;
+  border-color: #018ab4; }
+
+/* line 25, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_placeholder.sass */
+.cs-btn-secondary.cs-active, .cs-group-btn input:checked + .cs-btn-secondary {
+  background: #00222c;
+  box-shadow: inset 0 4px 5px rgba(255, 255, 255, 0.2); }
+
+/* line 29, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_placeholder.sass */
+.cs-btn:hover, .cs-btn:focus, [class*="cs-dropdown"] > ul a:hover, [class*="cs-dropdown"] > ul a:focus {
+  color: #007ca0; }
+
+/* line 32, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_placeholder.sass */
+.cs-sidebar .cs-title, input[id*="cs-sidebar-toggle-"]:checked + label + .cs-sidebar-toggle-content, label[for*="cs-sidebar-toggle-"] {
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.15); }
+
+/* line 35, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_placeholder.sass */
+.cs-sidebar .cs-title, input[id*="cs-sidebar-toggle-"]:checked + label + .cs-sidebar-toggle-content, label[for*="cs-sidebar-toggle-"], .cd-sidebar-group {
+  margin: 0 -18px;
+  padding: 0 18px; }
+
+/* line 39, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_placeholder.sass */
+[class*="cs-custom-select"].cs-custom-select-secondary, [class*="cs-dropdown"].cs-dropdown-secondary [class*="cs-btn"] {
+  border: 1px solid rgba(255, 255, 255, 0.2); }
+
+/* line 1, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_reset.sass */
+html {
+  box-sizing: border-box; }
+
+/* line 4, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_reset.sass */
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+/* line 9, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_reset.sass */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  background: transparent; }
+
+/* line 28, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_reset.sass */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 33, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_reset.sass */
+html:after, body:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+/* line 38, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_reset.sass */
+ol, ul {
+  list-style: none; }
+
+/* line 41, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_reset.sass */
+blockquote, q {
+  quotes: none; }
+
+/* line 44, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_reset.sass */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none; }
+
+/* line 49, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_reset.sass */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'yata';
+  src: url("fonts/icomoon.eot?-luxi4q-1");
+  src: url("fonts/icomoon.eot?#iefix-luxi4q-1") format("embedded-opentype"), url("fonts/icomoon.woff?-luxi4q-1") format("woff"), url("fonts/icomoon.ttf?-luxi4q-1") format("truetype"), url("fonts/icomoon.svg?-luxi4q-1#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* line 14, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+[class*="cs-ico"]:before {
+  font-family: 'yata';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  margin-right: 3px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-arrow-down:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-arrow-up:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-apparence:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-block:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-pages:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-go:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-back:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-alert:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-ok:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-check:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-close:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-code:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-config:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-duplicate:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-question:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-edit:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-form:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-gallery:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-home:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-image:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-trash:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-more:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-drag:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-share:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-arrows:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-suggestion:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-text:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-upload:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-sale:before {
+  content: ""; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_icons.scss */
+.cs-ico-video:before {
+  content: ""; }
+
+/* line 1, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+html {
+  height: 100%; }
+
+/* line 4, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+body {
+  height: 100%;
+  font-family: "Open Sans", verdana, arial, sans-serif; }
+
+/* line 8, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+.cs-main {
+  position: absolute;
+  top: 80px;
+  left: 300px;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  overflow-x: auto; }
+
+/* line 17, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+.cs-page {
+  position: relative;
+  z-index: 1; }
+
+/* line 21, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+.cs-site-sections {
+  border: solid 1px blue; }
+
+/* line 24, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+.cs-section {
+  border: solid 1px red;
+  margin: 3px;
+  padding-left: 3px; }
+  /* line 29, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+  .cs-section .cs-widget {
+    border: 1px solid #000; }
+
+/* line 33, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+.cs-section:hover .btn-add-section {
+  visibility: visible;
+  opacity: 1; }
+
+/* line 37, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+.btn-add-section {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  /* line 48, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+  .btn-add-section button {
+    margin: 0 -10px -10px 0;
+    width: 30px;
+    height: 30px;
+    line-height: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  /* line 63, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+  .btn-add-section:hover button {
+    opacity: 1; }
+
+/* line 66, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+.cs-line {
+  border: solid 1px green;
+  margin: 3px;
+  padding-left: 10px;
+  padding-bottom: 5px; }
+
+/* line 72, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+.cs-boxes {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+/* line 75, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+.cs-box {
+  border: solid 1px yellow;
+  margin: 3px;
+  padding-left: 10px;
+  word-break: break-all;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+/* line 82, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+.ui-sortable-handle {
+  cursor: move; }
+
+/* line 85, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+.ui-resizable-s {
+  height: 15px;
+  background-color: yellow;
+  width: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+
+/* line 93, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+.ui-resizable {
+  min-height: inherit; }
+
+/* line 2, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+[class*="cs-btn"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  height: 40px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 9px 14px;
+  border-radius: 5px;
+  background: #fff;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 1.42857;
+  text-decoration: none;
+  text-align: center;
+  white-space: normal;
+  color: #002d3a;
+  vertical-align: middle;
+  font-weight: normal; }
+  /* line 21, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+  [class*="cs-btn"][class*="cs-ico-"]:before {
+    font-size: 16px;
+    position: relative;
+    top: 2px; }
+  /* line 26, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+  [class*="cs-btn"][class*="cs-ico-"]:empty:before {
+    font-size: 22px;
+    top: 0; }
+  /* line 31, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+  [class*="cs-btn"][class*="cs-ico-"]:empty:before {
+    margin: 0; }
+  /* line 35, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+  [class*="cs-btn"].cs-disabled, [class*="cs-btn"][disabled] {
+    cursor: default;
+    opacity: 0.6; }
+  /* line 40, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+  [class*="cs-btn"] + [class*="cs-btn"] {
+    margin-left: 10px; }
+
+/* line 47, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+[class*="cs-btn-"] {
+  color: #fff; }
+
+/* line 52, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+.cs-btn.cs-active {
+  background: #ebebeb;
+  border-color: #adadad; }
+
+/* line 61, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+.cs-btn-primary {
+  background: #01b1e7;
+  border-color: #019ece;
+  color: #fff; }
+
+/* line 70, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+.cs-btn-secondary {
+  background: #00161d;
+  border-color: #475052; }
+
+/* line 77, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+.cs-btn-danger {
+  color: #d75553; }
+
+/* line 81, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+.cs-btn-confirm {
+  background: #d75553;
+  border-color: #d2413e; }
+
+/* line 89, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+.cs-btn-lg {
+  font-size: 16px;
+  padding: 13px 30px;
+  height: 50px; }
+
+/* line 94, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+.cs-btn-xs {
+  height: 30px;
+  font-size: 13px;
+  padding: 4px 10px;
+  line-height: 1.5; }
+
+/* line 102, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+.cs-group-btn {
+  position: relative;
+  z-index: 3; }
+  /* line 107, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+  .cs-group-btn [class*="cs-btn"] {
+    cursor: pointer; }
+    /* line 111, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+    .cs-group-btn [class*="cs-btn"]:first-child:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
+    /* line 115, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+    .cs-group-btn [class*="cs-btn"]:not(:first-child):not(:last-child):not(:last-of-type), .cs-group-btn [class*="cs-btn"]:nth-child(2):not(:last-child):not(:last-of-type) {
+      border-radius: 0; }
+    /* line 119, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+    .cs-group-btn [class*="cs-btn"]:last-child:not(:first-child), .cs-group-btn [class*="cs-btn"]:last-of-type:not(:first-child) {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0; }
+    /* line 124, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+    .cs-group-btn [class*="cs-btn"] + [class*="cs-btn"] {
+      margin-left: -1px; }
+  /* line 131, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+  .cs-group-btn input ~ [class*="cs-btn"] {
+    margin-left: -1px; }
+  /* line 137, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+  .cs-group-btn input:checked + [class*="cs-btn"]:before {
+    font-size: 20px;
+    top: 4px; }
+  /* line 147, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
+  .cs-group-btn input + [class*="cs-btn"]:nth-child(2) {
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important; }
+
+/* line 5, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_select.sass */
+[class*="cs-custom-select"] {
+  background: #fff;
+  display: inline-block;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 40px;
+  width: 100%; }
+  /* line 16, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_select.sass */
+  [class*="cs-custom-select"].cs-custom-select-auto {
+    width: auto; }
+  /* line 19, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_select.sass */
+  [class*="cs-custom-select"].cs-custom-select-secondary {
+    background: none;
+    text-align: right; }
+    /* line 24, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_select.sass */
+    [class*="cs-custom-select"].cs-custom-select-secondary select {
+      background: none;
+      text-align: left;
+      color: #b3bcbf; }
+    /* line 29, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_select.sass */
+    [class*="cs-custom-select"].cs-custom-select-secondary:before {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: 5px;
+      position: relative;
+      border: 5px solid transparent;
+      border-color: #ffffff transparent transparent transparent;
+      position: absolute; }
+  /* line 34, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_select.sass */
+  [class*="cs-custom-select"][disabled] {
+    border-color: #ccc; }
+  /* line 37, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_select.sass */
+  [class*="cs-custom-select"] select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    height: inherit;
+    padding: 5px 30px 5px 15px;
+    display: inline-block;
+    border: none;
+    background: #fff;
+    color: #002d3a;
+    font-size: 15px;
+    width: 100%;
+    width: 145% \9;
+    z-index: 1; }
+    /* line 51, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_select.sass */
+    [class*="cs-custom-select"] select option {
+      padding: 5px 10px; }
+    /* line 54, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_select.sass */
+    [class*="cs-custom-select"] select[disabled] {
+      background: #ccc; }
+  /* line 57, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_select.sass */
+  [class*="cs-custom-select"]:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    position: relative;
+    border: 5px solid transparent;
+    border-color: #475052 transparent transparent transparent;
+    content: "";
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 10px;
+    z-index: 2;
+    pointer-events: none; }
+  /* line 70, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_select.sass */
+  [class*="cs-custom-select"]:after {
+    content: "";
+    height: inherit;
+    position: absolute;
+    pointer-events: none;
+    width: 30px;
+    right: 0;
+    top: 0;
+    z-index: 1; }
+
+/* line 1, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_notifications.sass */
+.cs-alerts-list {
+  display: inline-block;
+  vertical-align: sub; }
+  /* line 5, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_notifications.sass */
+  .cs-alerts-list :before {
+    color: rgba(0, 45, 58, 0.5);
+    font-size: 20px;
+    margin: 0; }
+  /* line 10, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_notifications.sass */
+  .cs-alerts-list [class*="cs-ico"] {
+    margin-right: 30px;
+    position: relative;
+    width: 22px;
+    text-align: center; }
+    /* line 16, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_notifications.sass */
+    .cs-alerts-list [class*="cs-ico"]:after {
+      height: 17px;
+      width: 17px;
+      line-height: 17px;
+      border-radius: 50%;
+      font-size: 11px;
+      content: attr(data-counter);
+      position: absolute;
+      font-family: arial, sans-serif;
+      background: #ee0000;
+      color: #fff;
+      top: -10px;
+      left: 10px;
+      display: none;
+      -webkit-font-smoothing: auto;
+      -moz-osx-font-smoothing: grayscale; }
+    /* line 32, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_notifications.sass */
+    .cs-alerts-list [class*="cs-ico"][data-counter] {
+      color: #fff; }
+      /* line 35, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_notifications.sass */
+      .cs-alerts-list [class*="cs-ico"][data-counter]:after {
+        display: block; }
+    /* line 38, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_notifications.sass */
+    .cs-alerts-list [class*="cs-ico"].cs-active {
+      color: #fff; }
+    /* line 41, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_notifications.sass */
+    .cs-alerts-list [class*="cs-ico"] span {
+      display: none; }
+
+/* line 1, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sortable.sass */
+.dropzone-slot {
+  background-color: yellow;
+  padding: 2px; }
+
+/* line 5, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sortable.sass */
+.ui-draggable {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab; }
+
+/* line 10, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sortable.sass */
+.ui-sortable {
+  border: solid 1px;
+  padding: 3px; }
+
+/* line 1, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_header.sass */
+.cs-topbar {
+  background: #f4f4f4;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 30px 20px 20px;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+  /* line 12, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_header.sass */
+  .cs-topbar .cs-actions-topbar {
+    float: right; }
+  /* line 15, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_header.sass */
+  .cs-topbar a {
+    color: #fff;
+    text-decoration: none; }
+  /* line 19, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_header.sass */
+  .cs-topbar .cs-logo {
+    float: left;
+    color: #fff;
+    background: #01b1e7;
+    margin: -20px;
+    padding: 0 20px;
+    width: 300px; }
+    /* line 27, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_header.sass */
+    .cs-topbar .cs-logo a {
+      background: url(../images/logo.png) no-repeat 0 center;
+      height: 80px;
+      line-height: 80px;
+      font-weight: 400;
+      letter-spacing: -1px;
+      padding-left: 65px;
+      font-size: 27px;
+      display: block; }
+  /* line 38, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_header.sass */
+  .cs-topbar .cs-lang {
+    vertical-align: middle;
+    margin-right: 20px;
+    width: 93px; }
+  /* line 43, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_header.sass */
+  .cs-topbar .cs-group-btn {
+    vertical-align: middle;
+    display: inline-block; }
+  /* line 47, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_header.sass */
+  .cs-topbar .cs-group-active {
+    margin: 0 20px; }
+  /* line 50, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_header.sass */
+  .cs-topbar .cs-dropdown {
+    margin-left: 20px; }
+
+/* line 5, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sidebar.sass */
+.cs-sidebar {
+  position: fixed;
+  top: 80px;
+  color: #b3bcbf;
+  font-size: 13px;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  background: #001b23;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.6);
+  z-index: 2; }
+  /* line 17, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sidebar.sass */
+  .cs-sidebar .cs-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px; }
+  /* line 28, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sidebar.sass */
+  .cs-sidebar p {
+    margin-bottom: 15px; }
+  /* line 31, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sidebar.sass */
+  .cs-sidebar .cs-tab-label {
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    border-left: 1px solid #001b23;
+    background: #002d3a;
+    width: 33.3%;
+    float: left;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 15px 0; }
+    /* line 43, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sidebar.sass */
+    .cs-sidebar .cs-tab-label:before {
+      color: rgba(1, 177, 231, 0.6);
+      display: block;
+      margin-bottom: 5px;
+      font-size: 20px; }
+    /* line 49, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sidebar.sass */
+    .cs-sidebar .cs-tab-label:first-child {
+      border-left: none; }
+
+/* line 53, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sidebar.sass */
+.cs-sidebar-nav-option {
+  position: absolute;
+  top: 93px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0 18px;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0s ease-in-out;
+  -moz-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out; }
+
+/* line 69, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sidebar.sass */
+input[id*="cs-sidebar-nav-"]:checked + .cs-tab-label, input[id*="cs-sidebar-toggle-"]:checked + .cs-tab-label, input[id="cs-themes"]:checked + .cs-tab-label, .cs-theme-colors input[id*="cs-theme-color-"]:checked + .cs-tab-label {
+  color: #ffffff;
+  background: transparent; }
+  /* line 73, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sidebar.sass */
+  input[id*="cs-sidebar-nav-"]:checked + .cs-tab-label:before, input[id*="cs-sidebar-toggle-"]:checked + .cs-tab-label:before, input[id="cs-themes"]:checked + .cs-tab-label:before, .cs-theme-colors input[id*="cs-theme-color-"]:checked + .cs-tab-label:before {
+    color: #01b1e7; }
+
+/* line 79, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sidebar.sass */
+input[id="cs-sidebar-nav-elements"]:checked ~ .cs-sidebar-nav label[for="cs-sidebar-nav-elements"] {
+  border-bottom-color: transparent; }
+/* line 82, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sidebar.sass */
+input[id="cs-sidebar-nav-elements"]:checked ~ .cs-sidebar-nav-elements {
+  visibility: visible;
+  opacity: 1; }
+
+/* line 79, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sidebar.sass */
+input[id="cs-sidebar-nav-appearance"]:checked ~ .cs-sidebar-nav label[for="cs-sidebar-nav-appearance"] {
+  border-bottom-color: transparent; }
+/* line 82, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sidebar.sass */
+input[id="cs-sidebar-nav-appearance"]:checked ~ .cs-sidebar-nav-appearance {
+  visibility: visible;
+  opacity: 1; }
+
+/* line 79, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sidebar.sass */
+input[id="cs-sidebar-nav-pages"]:checked ~ .cs-sidebar-nav label[for="cs-sidebar-nav-pages"] {
+  border-bottom-color: transparent; }
+/* line 82, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sidebar.sass */
+input[id="cs-sidebar-nav-pages"]:checked ~ .cs-sidebar-nav-pages {
+  visibility: visible;
+  opacity: 1; }
+
+/* line 1, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_evo-colorpicker.sass */
+.evo-pop {
+  width: auto;
+  background: #fff;
+  border: 1px solid #555;
+  box-shadow: 0 0 5px #000; }
+
+/* line 1, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_topbar.sass */
+.cs-topbar-tools {
+  float: right; }
+
+/* line 1, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+[class*="cs-dropdown"] {
+  display: inline-block;
+  position: relative;
+  border-bottom: 10px solid transparent; }
+  /* line 9, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+  [class*="cs-dropdown"].cs-dropdown-secondary [class*="cs-btn"] {
+    background: transparent; }
+    /* line 13, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+    [class*="cs-dropdown"].cs-dropdown-secondary [class*="cs-btn"]:after {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: 5px;
+      position: relative;
+      border: 6px solid transparent;
+      border-color: #fff transparent transparent transparent; }
+  /* line 16, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+  [class*="cs-dropdown"] > ul {
+    position: absolute;
+    top: 114%;
+    left: 0;
+    margin-top: -1px;
+    border: solid #ccc;
+    border-radius: 5px;
+    border-width: 1px;
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    white-space: nowrap; }
+    /* line 29, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+    [class*="cs-dropdown"] > ul.cs-right {
+      left: auto;
+      right: 0; }
+    /* line 33, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+    [class*="cs-dropdown"] > ul li {
+      border-bottom: 1px solid #ccc; }
+      /* line 36, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+      [class*="cs-dropdown"] > ul li:last-child {
+        border-bottom: none; }
+    /* line 39, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+    [class*="cs-dropdown"] > ul a {
+      color: #002d3a;
+      padding: 10px 20px;
+      display: block;
+      font-size: 15px; }
+    /* line 50, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+    [class*="cs-dropdown"] > ul .cs-dropdown-featured a {
+      background: #f7f7f7; }
+      /* line 53, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+      [class*="cs-dropdown"] > ul .cs-dropdown-featured a:last-child {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px; }
+  /* line 60, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+  [class*="cs-dropdown"] [class*="cs-btn"]:empty:after {
+    margin-left: 0; }
+  /* line 63, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+  [class*="cs-dropdown"] [class*="cs-btn"]:after {
+    content: "";
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    position: relative;
+    border: 6px solid transparent;
+    border-color: #000 transparent transparent transparent;
+    margin-left: 10px;
+    top: 4px;
+    position: relative; }
+  /* line 70, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+  [class*="cs-dropdown"] [class*="cs-btn"]:focus ~ ul {
+    visibility: visible;
+    opacity: 1; }
+  /* line 76, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+  [class*="cs-dropdown"]:hover .cs-dropdown-selected {
+    background: #fff;
+    border-color: #555;
+    border-bottom-color: transparent;
+    position: relative;
+    z-index: 1; }
+  /* line 83, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+  [class*="cs-dropdown"]:hover > ul {
+    visibility: visible;
+    opacity: 1;
+    z-index: 9; }
+  /* line 88, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+  [class*="cs-dropdown"].cs-dropdown-pos-right ul {
+    left: auto;
+    right: 0; }
+
+/* line 92, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+.cs-dropdown-selected {
+  display: block;
+  padding: 4px 10px;
+  border: 1px solid transparent; }
+
+/* line 101, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+.cs-dropdown-background [class*="cs-btn"] {
+  height: 60px;
+  line-height: 50px;
+  text-align: right;
+  position: relative;
+  overflow: hidden;
+  width: 120px; }
+  /* line 109, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+  .cs-dropdown-background [class*="cs-btn"] img {
+    position: absolute;
+    display: block;
+    top: -5px;
+    left: -5px;
+    height: 66px;
+    width: 86px; }
+  /* line 117, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+  .cs-dropdown-background [class*="cs-btn"]:after {
+    top: 0; }
+/* line 120, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+.cs-dropdown-background ul {
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 2px #ccc; }
+  /* line 125, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+  .cs-dropdown-background ul li {
+    border: none;
+    width: 50%;
+    padding: 2px; }
+    /* line 130, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_dropdown.sass */
+    .cs-dropdown-background ul li img {
+      display: block;
+      width: 100%; }
+
+/* line 1, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_include-elements.sass */
+.cs-widgets-group {
+  overflow: visible; }
+
+/* line 4, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_include-elements.sass */
+.cs-sidebar-widget {
+  width: calc( 33.3% - 10px);
+  padding: 15px 10px;
+  height: 85px;
+  margin: 0 0 10px 10px;
+  border: 1px solid rgba(1, 177, 231, 0.2);
+  background: rgba(1, 177, 231, 0.15);
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  line-height: 1.2;
+  font-size: 12px; }
+  /* line 18, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_include-elements.sass */
+  .cs-sidebar-widget:nth-child(3n-1) {
+    margin-left: 0; }
+  /* line 21, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_include-elements.sass */
+  .cs-sidebar-widget:before {
+    font-size: 26px;
+    display: block;
+    margin-bottom: 7px; }
+  /* line 26, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_include-elements.sass */
+  .cs-sidebar-widget:hover {
+    border: 1px solid rgba(1, 177, 231, 0.4);
+    background: rgba(1, 177, 231, 0.3); }
+
+/* line 1, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_pages-config.sass */
+.cs-pages-list {
+  border: none;
+  padding: 0; }
+  /* line 5, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_pages-config.sass */
+  .cs-pages-list li {
+    list-style: none; }
+    /* line 7, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_pages-config.sass */
+    .cs-pages-list li a {
+      display: block;
+      padding: 4px 10px;
+      border: solid 1px #ccc;
+      border-top: none; }
+    /* line 12, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_pages-config.sass */
+    .cs-pages-list li:hover {
+      background-color: #ccc; }
+
+/* line 2, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_edit-appearance.sass */
+.cs-sidebar-nav-aparencia hr {
+  margin: 10px 0; }
+
+/* line 5, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_edit-appearance.sass */
+.cs-sidebar-toggle-content {
+  border: none; }
+
+/* line 11, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_edit-appearance.sass */
+input[id*="cs-sidebar-toggle-"]:checked + label {
+  border-bottom: none;
+  background: #001015; }
+  /* line 15, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_edit-appearance.sass */
+  input[id*="cs-sidebar-toggle-"]:checked + label:after {
+    content: ""; }
+  /* line 18, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_edit-appearance.sass */
+  input[id*="cs-sidebar-toggle-"]:checked + label + .cs-sidebar-toggle-content {
+    display: block;
+    background: #001015;
+    padding-bottom: 20px; }
+
+/* line 25, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_edit-appearance.sass */
+label[for*="cs-sidebar-toggle-"] {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  cursor: pointer; }
+  /* line 34, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_edit-appearance.sass */
+  label[for*="cs-sidebar-toggle-"]:after {
+    content: "";
+    font-family: "yata";
+    float: right; }
+  /* line 39, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_edit-appearance.sass */
+  label[for*="cs-sidebar-toggle-"]:first {
+    border-top: 1px dotted rgba(255, 255, 255, 0.15); }
+  /* line 42, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_edit-appearance.sass */
+  label[for*="cs-sidebar-toggle-"]:hover {
+    background: #001015; }
+
+/* line 45, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_edit-appearance.sass */
+.cs-sidebar-toggle-content {
+  display: none; }
+
+/* line 48, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_edit-appearance.sass */
+.cd-sidebar-group {
+  border-top: 1px dotted rgba(255, 255, 255, 0.15);
+  margin-bottom: 40px; }
+
+/* line 7, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+input[id="cs-themes"]:checked + .cs-themes {
+  visibility: visible;
+  opacity: 1; }
+
+/* line 11, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+.cs-themes {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  bottom: 0;
+  left: 300px;
+  padding: 20px;
+  background: #cccccc;
+  z-index: 1;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+
+/* line 25, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+.cs-themes-title {
+  padding: 20px 0;
+  font-size: 22px; }
+
+/* line 29, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+.cs-themes-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer; }
+
+/* line 36, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+.cs-theme-colors {
+  background: #ffffff; }
+  /* line 42, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors label[for*="cs-theme-color"] {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 0 0 #ffffff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  /* line 54, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-yellow"] + label {
+    background: yellow; }
+  /* line 57, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-yellow"]:checked + label {
+    box-shadow: 0 0 2px 0px #999900; }
+  /* line 54, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-blue"] + label {
+    background: blue; }
+  /* line 57, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-blue"]:checked + label {
+    box-shadow: 0 0 2px 0px #000099; }
+  /* line 54, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-beige"] + label {
+    background: beige; }
+  /* line 57, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-beige"]:checked + label {
+    box-shadow: 0 0 2px 0px #dede8d; }
+  /* line 54, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-gray"] + label {
+    background: gray; }
+  /* line 57, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-gray"]:checked + label {
+    box-shadow: 0 0 2px 0px #4d4d4d; }
+  /* line 54, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-orange"] + label {
+    background: orange; }
+  /* line 57, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-orange"]:checked + label {
+    box-shadow: 0 0 2px 0px #996300; }
+  /* line 54, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-brown"] + label {
+    background: brown; }
+  /* line 57, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-brown"]:checked + label {
+    box-shadow: 0 0 2px 0px #541515; }
+  /* line 54, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-black"] + label {
+    background: black; }
+  /* line 57, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-black"]:checked + label {
+    box-shadow: 0 0 2px 0px black; }
+  /* line 54, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-pink"] + label {
+    background: pink; }
+  /* line 57, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-pink"]:checked + label {
+    box-shadow: 0 0 2px 0px #ff5a77; }
+  /* line 54, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-green"] + label {
+    background: green; }
+  /* line 57, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-green"]:checked + label {
+    box-shadow: 0 0 2px 0px #001a00; }
+  /* line 54, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-red"] + label {
+    background: red; }
+  /* line 57, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-red"]:checked + label {
+    box-shadow: 0 0 2px 0px #990000; }
+  /* line 54, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-violet"] + label {
+    background: violet; }
+  /* line 57, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-theme-colors input[id*="cs-theme-color-violet"]:checked + label {
+    box-shadow: 0 0 2px 0px #e228e2; }
+
+/* line 60, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+.cs-themes-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify; }
+  /* line 66, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-themes-list li {
+    position: relative;
+    width: 31%;
+    margin: 15px 0 0; }
+    /* line 71, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+    .cs-themes-list li > a {
+      display: block; }
+    /* line 74, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+    .cs-themes-list li img {
+      display: block;
+      max-width: 100%; }
+
+/* line 78, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+.cs-themes-actions {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  text-align: right; }
+  /* line 85, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_themes.sass */
+  .cs-themes-actions a {
+    display: inline-block;
+    padding: 2px 5px;
+    background: #ffffff;
+    text-decoration: none; }
+/*
+
+*/
+
