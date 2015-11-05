@@ -96,9 +96,9 @@
     <sidebar id="ember527" class="ember-view cs-sidebar">
   <input type="radio" id="cs-sidebar-nav-elements" name="cs-sidebar-nav" >
   <label for="cs-sidebar-nav-elements" title="Incluir elementos" class="cs-tab-label cs-ico-block">elementos</label>
-  <input type="radio" id="cs-sidebar-nav-appearance" name="cs-sidebar-nav" checked="checked">
+  <input type="radio" id="cs-sidebar-nav-appearance" name="cs-sidebar-nav" >
   <label for="cs-sidebar-nav-appearance" title="Editar aparência" class="cs-tab-label cs-ico-apparence">aparência</label>
-  <input type="radio" id="cs-sidebar-nav-pages" name="cs-sidebar-nav">
+  <input type="radio" id="cs-sidebar-nav-pages" name="cs-sidebar-nav" checked="checked">
   <label for="cs-sidebar-nav-pages" title="Configurar páginas" class="cs-tab-label cs-ico-pages">páginas</label>
 
 
@@ -135,11 +135,11 @@
   <div id="ember561" class="ember-view cs-sidebar-nav-option cs-sidebar-nav-appearance">
   <p>Configure Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et </p>
-  <a href="#" class="cs-btn-primary">Editar CSS </a>
+  <a href="#" class="cs-btn-primary cs-btn-center">Editar CSS </a>
   <form action="">
     <h2 class="cs-title">Fundo do Site</h2>
-    <fieldset>
-      <div class="select">
+    <fieldset class="cs-fieldset">
+      <div class="cs-field">
         <div class="cs-dropdown-secondary cs-dropdown-background">
           <a href="#" class="cs-btn">
             <img src="http://www.mycutegraphics.com/backgrounds/summer/th-popsicle-background.gif" alt="">
@@ -168,11 +168,11 @@
           </ul>
         </div>
       </div>
-      <div class="input">
-        <label for="cs-site-file">Enviar imagem</label>
+      <div class="cs-field">
+        <label for="cs-site-file" class="cs-ico-upload">Enviar imagem</label>
         <input type="file" name="cs-site-file" id="cs-site-file">
       </div>
-      <div class="select">
+      <div class="cs-field">
         <label>Formatação</label>
         <div class="cs-custom-select-secondary">
           <select class="ls-select" id="cs-site-repeat">
@@ -183,7 +183,7 @@
           </select>
         </div>
       </div>
-      <!-- <div class="input">
+      <!-- <div class="cs-field">
         <label for="cs-site-background-color">Cor de fundo</label>
         <div style="width:149px;" class="evo-cp-wrap">
           <input type="text" name="cs-site-background-color" id="cs-site-background-color" data-module="colorpicker" class="colorPicker evo-cp8">
@@ -192,13 +192,13 @@
       </div> -->
     </fieldset>
 
-    <h3>FONTES E CORES</h3>
+    <h2 class="cs-title">Fontes de Cores</h2>
     <div class="cd-sidebar-group">
       <div id="ember570" class="ember-view">
         <input type="checkbox" name="cs-sidebar-toggle" id="cs-sidebar-toggle-title" data-ember-action="571">
         <label for="cs-sidebar-toggle-title">Título do site</label>
         <fieldset class="cs-sidebar-toggle-content">
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontfamily-title">Fonte</label>
             <select id="cs-edit-fontfamily-title">
               <option>Arial</option>
@@ -206,7 +206,7 @@
               <option>Verdana</option>
             </select>
           </div>
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontsize-title">Tamanho</label>
             <select id="cs-edit-fontsize-title">
               <option>8</option>
@@ -214,7 +214,7 @@
               <option>12</option>
             </select>
           </div>
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontstyle-title">Estilo</label>
             <select id="cs-edit-fontstyle-title">
               <option>Negrito</option>
@@ -222,7 +222,7 @@
               <option>Sem estilo</option>
             </select>
           </div>
-          <div class="input">
+          <div class="cs-field">
             <label for="cs-edit-textcolor-title">Cor do texto</label>
             <div style="width:116px;" class="evo-cp-wrap">
               <input type="text" data-module="colorpicker" style="width: 90px;" id="cs-edit-textcolor-title" class="colorPicker evo-cp0">
@@ -236,7 +236,7 @@
         <input type="checkbox" name="cs-sidebar-toggle" id="cs-sidebar-toggle-texts" data-ember-action="573">
         <label for="cs-sidebar-toggle-texts">Textos do site</label>
         <fieldset class="cs-sidebar-toggle-content">
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontfamily-texts">Fonte</label>
             <select id="cs-edit-fontfamily-texts">
               <option>Arial</option>
@@ -244,7 +244,7 @@
               <option>Verdana</option>
             </select>
           </div>
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontsize-texts">Tamanho</label>
             <select id="cs-edit-fontsize-texts">
               <option>8</option>
@@ -252,7 +252,7 @@
               <option>12</option>
             </select>
           </div>
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontstyle-texts">Estilo</label>
             <select id="cs-edit-fontstyle-texts">
               <option>Negrito</option>
@@ -260,7 +260,7 @@
               <option>Sem estilo</option>
             </select>
           </div>
-          <div class="input">
+          <div class="cs-field">
             <label for="cs-edit-textcolor-texts">Cor do texto</label>
             <div style="width:116px;" class="evo-cp-wrap">
               <input type="text" data-module="colorpicker" style="width: 90px;" id="cs-edit-textcolor-texts" class="colorPicker evo-cp1">
@@ -274,7 +274,7 @@
         <input type="checkbox" name="cs-sidebar-toggle" id="cs-sidebar-toggle-buttons" data-ember-action="575">
         <label for="cs-sidebar-toggle-buttons">Botões (todos os botões)</label>
         <fieldset class="cs-sidebar-toggle-content">
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontfamily-buttons">Fonte</label>
             <select id="cs-edit-fontfamily-buttons">
               <option>Arial</option>
@@ -282,7 +282,7 @@
               <option>Verdana</option>
             </select>
           </div>
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontsize-buttons">Tamanho</label>
             <select id="cs-edit-fontsize-buttons">
               <option>8</option>
@@ -290,7 +290,7 @@
               <option>12</option>
             </select>
           </div>
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontstyle-buttons">Estilo</label>
             <select id="cs-edit-fontstyle-buttons">
               <option>Negrito</option>
@@ -298,7 +298,7 @@
               <option>Sem estilo</option>
             </select>
           </div>
-          <div class="input">
+          <div class="cs-field">
             <label for="cs-edit-textcolor-buttons">Cor do texto</label>
             <div style="width:116px;" class="evo-cp-wrap">
               <input type="text" data-module="colorpicker" style="width: 90px;" id="cs-edit-textcolor-buttons" class="colorPicker evo-cp2">
@@ -313,7 +313,7 @@
         <input type="checkbox" name="cs-sidebar-toggle" id="cs-sidebar-toggle-nav" data-ember-action="577">
         <label for="cs-sidebar-toggle-nav">Menu de navegação</label>
         <fieldset class="cs-sidebar-toggle-content">
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontfamily-nav">Fonte</label>
             <select id="cs-edit-fontfamily-nav">
               <option>Arial</option>
@@ -321,7 +321,7 @@
               <option>Verdana</option>
             </select>
           </div>
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontsize-nav">Tamanho</label>
             <select id="cs-edit-fontsize-nav">
               <option>8</option>
@@ -329,7 +329,7 @@
               <option>12</option>
             </select>
           </div>
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontstyle-nav">Estilo</label>
             <select id="cs-edit-fontstyle-nav">
               <option>Negrito</option>
@@ -337,7 +337,7 @@
               <option>Sem estilo</option>
             </select>
           </div>
-          <div class="input">
+          <div class="cs-field">
             <label for="cs-edit-textcolor-nav">Cor do texto</label>
             <div style="width:116px;" class="evo-cp-wrap">
               <input type="text" data-module="colorpicker" style="width: 90px;" id="cs-edit-textcolor-nav" class="colorPicker evo-cp3">
@@ -345,7 +345,7 @@
             </div>
           </div>
 
-            <div class="input">
+            <div class="cs-field">
               <label for="cs-edit-texthover-nav">Cor do texto</label>
               <div style="width:116px;" class="evo-cp-wrap">
                 <input type="text" data-module="colorpicker" style="width: 90px;" id="cs-edit-texthover-nav" class="colorPicker evo-cp4">
@@ -359,7 +359,7 @@
         <input type="checkbox" name="cs-sidebar-toggle" id="cs-sidebar-toggle-products" data-ember-action="579">
         <label for="cs-sidebar-toggle-products">Produtos da loja virtual</label>
         <fieldset class="cs-sidebar-toggle-content">
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontfamily-products">Fonte</label>
             <select id="cs-edit-fontfamily-products">
               <option>Arial</option>
@@ -367,7 +367,7 @@
               <option>Verdana</option>
             </select>
           </div>
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontsize-products">Tamanho</label>
             <select id="cs-edit-fontsize-products">
               <option>8</option>
@@ -375,7 +375,7 @@
               <option>12</option>
             </select>
           </div>
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontstyle-products">Estilo</label>
             <select id="cs-edit-fontstyle-products">
               <option>Negrito</option>
@@ -383,7 +383,7 @@
               <option>Sem estilo</option>
             </select>
           </div>
-          <div class="input">
+          <div class="cs-field">
             <label for="cs-edit-textcolor-products">Cor do texto</label>
             <div style="width:116px;" class="evo-cp-wrap">
               <input type="text" data-module="colorpicker" style="width: 90px;" id="cs-edit-textcolor-products" class="colorPicker evo-cp5">
@@ -397,7 +397,7 @@
         <input type="checkbox" name="cs-sidebar-toggle" id="cs-sidebar-toggle-links" data-ember-action="581">
         <label for="cs-sidebar-toggle-links">Links do site</label>
         <fieldset class="cs-sidebar-toggle-content">
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontfamily-links">Fonte</label>
             <select id="cs-edit-fontfamily-links">
               <option>Arial</option>
@@ -405,7 +405,7 @@
               <option>Verdana</option>
             </select>
           </div>
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontsize-links">Tamanho</label>
             <select id="cs-edit-fontsize-links">
               <option>8</option>
@@ -413,7 +413,7 @@
               <option>12</option>
             </select>
           </div>
-          <div class="select">
+          <div class="cs-field">
             <label for="cs-edit-fontstyle-links">Estilo</label>
             <select id="cs-edit-fontstyle-links">
               <option>Negrito</option>
@@ -421,7 +421,7 @@
               <option>Sem estilo</option>
             </select>
           </div>
-          <div class="input">
+          <div class="cs-field">
             <label for="cs-edit-textcolor-links">Cor do texto</label>
             <div style="width:116px;" class="evo-cp-wrap">
               <input type="text" data-module="colorpicker" style="width: 90px;" id="cs-edit-textcolor-links" class="colorPicker evo-cp6">
@@ -429,7 +429,7 @@
             </div>
           </div>
 
-          <div class="input">
+          <div class="cs-field">
             <label for="cs-edit-texthover-links">Cor do texto</label>
             <div style="width:116px;" class="evo-cp-wrap">
               <input type="text" data-module="colorpicker" style="width: 90px;" id="cs-edit-texthover-links" class="colorPicker evo-cp7">
@@ -440,75 +440,43 @@
         </fieldset>
       </div>
     </div>
-    <label for="cs-themes">Mudar Tema</label>
+    <label for="cs-themes" class="cs-btn-secondary cs-btn-center">Mudar Tema</label>
   </form>
 </div>
 
   <div id="ember590" class="ember-view cs-sidebar-nav-option cs-sidebar-nav-pages">
-  <h2>PAGINAS</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  <p>Configure páginas existentes, adicione páginas novas ou altere itens do menu.</p>
 
-  <br>
+  <a href="" class="cs-btn-primary cs-btn-center">Adicionar páginas</a>
+  <a href="" class="cs-btn-secondary cs-btn-center">Adicionar link externo</a>
 
-  <input type="checkbox" id="cs-sidebar-new-page">
+ <!--  <input type="checkbox" id="cs-sidebar-new-page">
   <label for="cs-sidebar-new-page">Adicionar página</label>
   <div class="cs-sidebar-new-page">
     <button data-ember-action="591">Criar página</button>
-  </div>
+  </div> -->
 
   <div id="ember607" class="ember-view cs-pages-list ui-sortable">
-      <ul>
+      <ul class="cs-list-pages">
           <li id="ember725" data-id="-K1f9iG2xc7bDOgNP6I2" class="ember-view cs-pages-list-item">
-            <a id="ember726" href="/pages/-K1f9iG2xc7bDOgNP6I2" class="ember-view">  -K1f9iG2xc7bDOgNP6I2 - 1
-            </a>
+            <a id="ember726" href="" class="cs-pages-link ember-view">Home</a>
+            <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
+            <a href="" class="cs-ico-config" title="Configurar página"></a>
           </li>
           <li id="ember617" data-id="-K1KYuAfIAnz5bLr3zE6" class="ember-view cs-pages-list-item ui-sortable-handle">
-            <a id="ember618" href="/pages/-K1KYuAfIAnz5bLr3zE6" class="ember-view active">  -K1KYuAfIAnz5bLr3zE6 - 2
-            </a>
+            <a id="ember618" href="" class="cs-pages-link ember-view cs-page-hidden">Produtos <em>(oculto)</em></a>
+            <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
+            <a href="" class="cs-ico-config" title="Configurar página"></a>
           </li>
           <li id="ember755" data-id="-K1d75cfq5d9qvWUQYX4" class="ember-view cs-pages-list-item">
-            <a id="ember756" href="/pages/-K1d75cfq5d9qvWUQYX4" class="ember-view">  -K1d75cfq5d9qvWUQYX4 - 3
-            </a>
+            <a id="ember756" href="" class="cs-pages-link ember-view">Contato</a>
+            <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
+            <a href="" class="cs-ico-config" title="Configurar página"></a>
           </li>
           <li id="ember752" data-id="-K1aNA0KHHNAxOdse4Oj" class="ember-view cs-pages-list-item">
-            <a id="ember753" href="/pages/-K1aNA0KHHNAxOdse4Oj" class="ember-view">  -K1aNA0KHHNAxOdse4Oj - 4
-            </a>
-          </li>
-          <li id="ember749" data-id="-K1aBKIaTTITv3Pck2tQ" class="ember-view cs-pages-list-item">
-            <a id="ember750" href="/pages/-K1aBKIaTTITv3Pck2tQ" class="ember-view">  -K1aBKIaTTITv3Pck2tQ - 5
-            </a>
-          </li>
-          <li id="ember746" data-id="-K1aAB_uJS1C-SXJDUss" class="ember-view cs-pages-list-item">
-            <a id="ember747" href="/pages/-K1aAB_uJS1C-SXJDUss" class="ember-view">  -K1aAB_uJS1C-SXJDUss - 6
-            </a>
-          </li>
-          <li id="ember743" data-id="-K1aAAkigK6tBGAnYRfG" class="ember-view cs-pages-list-item">
-            <a id="ember744" href="/pages/-K1aAAkigK6tBGAnYRfG" class="ember-view">  -K1aAAkigK6tBGAnYRfG - 7
-            </a>
-          </li>
-          <li id="ember737" data-id="-K1a4UmA7nwq8hcj5_uG" class="ember-view cs-pages-list-item">
-            <a id="ember738" href="/pages/-K1a4UmA7nwq8hcj5_uG" class="ember-view">  Página iniciaa - 8
-            </a>
-          </li>
-          <li id="ember734" data-id="-K1_oFP_O66gfo3XCCC7" class="ember-view cs-pages-list-item">
-            <a id="ember735" href="/pages/-K1_oFP_O66gfo3XCCC7" class="ember-view">  -K1_oFP_O66gfo3XCCC7 - 9
-            </a>
-          </li>
-          <li id="ember722" data-id="-K1a4Xx-aGC8hzcyskXH" class="ember-view cs-pages-list-item">
-            <a id="ember723" href="/pages/-K1a4Xx-aGC8hzcyskXH" class="ember-view">  -K1a4Xx-aGC8hzcyskXH - 10
-            </a>
-          </li>
-          <li id="ember728" data-id="-K1LJBy9ycmAnxpozRWP" class="ember-view cs-pages-list-item">
-            <a id="ember729" href="/pages/-K1LJBy9ycmAnxpozRWP" class="ember-view">  -K1LJBy9ycmAnxpozRWP - 11
-            </a>
-          </li>
-          <li id="ember740" data-id="-K1LAP0_DiU9H9qAE9us" class="ember-view cs-pages-list-item">
-            <a id="ember741" href="/pages/-K1LAP0_DiU9H9qAE9us" class="ember-view">  -K1LAP0_DiU9H9qAE9us - 12
-            </a>
-          </li>
-          <li id="ember731" data-id="-K1LZzpXQPS1ZOjxSiD9" class="ember-view cs-pages-list-item">
-            <a id="ember732" href="/pages/-K1LZzpXQPS1ZOjxSiD9" class="ember-view">  AEEEE AQUI AQUI AQUI - 13
-            </a>
+            <a id="ember753" href="" class="cs-pages-link ember-view cs-page-hidden">Links Úteis <em>(oculto)</em></a>
+            <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
+            <a href="" class="cs-ico-config" title="Configurar página"></a>
           </li>
       </ul>
 
