@@ -10,7 +10,7 @@
     
     <title>Home</title>
     
-    <link rel="stylesheet" href="/yata-static/assets/stylesheets/all.css">
+    <link rel="stylesheet" href="http://frontendlw.github.io/yata-static/assets/stylesheets/all.css">
 
   </head>
   
@@ -43,11 +43,9 @@
       </select>
     </div>
 
-    <div class="cs-group-btn cs-group-active">
-      <input type="radio" id="radio1" name="radio">
-      <label for="radio1" class="cs-btn cs-ico-back" title="Voltar edição"></label>
-      <input type="radio" id="radio2" name="radio">
-      <label for="radio2" class="cs-btn cs-ico-go" title="Avançar edição"></label>
+    <div class="cs-group-btn">
+      <button href="" title="Voltar edição" class="cs-btn cs-ico-back"></button>
+      <button href="" title="Avançar edição" class="cs-btn cs-ico-go"></button>
     </div>
 
     <div class="cs-group-btn">
@@ -115,7 +113,7 @@
   <div id="ember553d" data-kind="form" class="cs-ico-video ember-view cs-sidebar-widget ui-draggable ui-draggable-handle">
   Vídeo
   </div>
-  <div id="ember553e" data-kind="form" class="cs-ico-ok ember-view cs-sidebar-widget ui-draggable ui-draggable-handle">
+  <div id="ember553e" data-kind="form" class="cs-disabled cs-ico-ok ember-view cs-sidebar-widget ui-draggable ui-draggable-handle">
   Botão
   </div>
   <div id="ember553f" data-kind="form" class="cs-ico-form ember-view cs-sidebar-widget ui-draggable ui-draggable-handle">
@@ -174,7 +172,7 @@
       </div>
       <div class="cs-field">
         <label>Formatação</label>
-        <div class="cs-custom-select-secondary">
+        <div class="cs-custom-select-secondary cs-size-small">
           <select class="ls-select" id="cs-site-repeat">
             <option selected="" value="repeat">Repetir tudo</option>
             <option value="repeat-x">Repetir horizontal</option>
@@ -447,36 +445,34 @@
   <div id="ember590" class="ember-view cs-sidebar-nav-option cs-sidebar-nav-pages">
   <p>Configure páginas existentes, adicione páginas novas ou altere itens do menu.</p>
 
-  <a href="" class="cs-btn-primary cs-btn-center">Adicionar páginas</a>
-  <a href="" class="cs-btn-secondary cs-btn-center">Adicionar link externo</a>
-
- <!--  <input type="checkbox" id="cs-sidebar-new-page">
-  <label for="cs-sidebar-new-page">Adicionar página</label>
-  <div class="cs-sidebar-new-page">
-    <button data-ember-action="591">Criar página</button>
-  </div> -->
+  <label for="cs-sidebar-new-page" class="cs-btn-primary cs-btn-center">Adicionar página</label>
+  <label for="cs-sidebar-new-link" class="cs-btn-secondary cs-btn-center">Adicionar link externo</label>
 
   <div id="ember607" class="ember-view cs-pages-list ui-sortable">
-      <ul class="cs-list-pages">
-          <li id="ember725" data-id="-K1f9iG2xc7bDOgNP6I2" class="ember-view cs-pages-list-item">
-            <a id="ember726" href="" class="cs-pages-link ember-view">Home</a>
-            <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
-            <a href="" class="cs-ico-config" title="Configurar página"></a>
+      <ul class="cs-list-pages" id="sortable">
+          <li id="ember725" data-id="-K1f9iG2xc7bDOgNP6I2" class="ember-view ui-state-disabled cs-pages-list-item">
+
+          <a id="ember726" href="" class="cs-pages-link ember-view"><span class="cs-ico-home"></span>Home</a>
+              <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
+              <a href="" class="cs-ico-config" title="Configurar página"></a>
           </li>
-          <li id="ember617" data-id="-K1KYuAfIAnz5bLr3zE6" class="ember-view cs-pages-list-item ui-sortable-handle">
-            <a id="ember618" href="" class="cs-pages-link ember-view cs-page-hidden">Produtos <em>(oculto)</em></a>
-            <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
-            <a href="" class="cs-ico-config" title="Configurar página"></a>
+          <li id="ember617" data-id="-K1KYuAfIAnz5bLr3zE6" class="ember-view ui-state-default cs-pages-list-item ">
+
+              <a id="ember618" href="" class="cs-pages-link ember-view cs-page-hidden"><span class="cs-ico-drag"></span> Produtos <em>(oculto)</em></a>
+              <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
+              <a href="" class="cs-ico-config" title="Configurar página"></a>
           </li>
-          <li id="ember755" data-id="-K1d75cfq5d9qvWUQYX4" class="ember-view cs-pages-list-item">
-            <a id="ember756" href="" class="cs-pages-link ember-view">Contato</a>
-            <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
-            <a href="" class="cs-ico-config" title="Configurar página"></a>
           </li>
-          <li id="ember752" data-id="-K1aNA0KHHNAxOdse4Oj" class="ember-view cs-pages-list-item">
-            <a id="ember753" href="" class="cs-pages-link ember-view cs-page-hidden">Links Úteis <em>(oculto)</em></a>
-            <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
-            <a href="" class="cs-ico-config" title="Configurar página"></a>
+          <li id="ember755" data-id="-K1d75cfq5d9qvWUQYX4"  class="ember-view ui-state-default cs-pages-list-item">
+                <a id="ember756" href="" class="cs-pages-link ember-view"><span class="cs-ico-drag"></span>Contato</a>
+              <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
+              <a href="" class="cs-ico-config" title="Configurar página"></a>
+          </li>
+          <li id="ember752" data-id="-K1aNA0KHHNAxOdse4Oj" class="ember-view ui-state-default cs-pages-list-item">
+              <a id="ember753" href="" class="cs-pages-link ember-view cs-page-hidden"><span class="cs-ico-drag"></span>Links Úteis <em>(oculto)</em></a>
+              <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
+              <a href="" class="cs-ico-config" title="Configurar página"></a>
+            </div>
           </li>
       </ul>
 
@@ -550,63 +546,63 @@
 
       <ul class="cs-themes-list">
         <li>
-          <img src="/assets/images/preview.png" alt="">
+          <img src="http://frontendlw.github.io/yata-static/assets/images/preview.png" alt="">
           <span class="cs-themes-actions">
             <a href="javascript:;" title="Ver">Ver</a>
             <a href="javascript:;" title="Aplicar">Aplicar</a>
           </span>
         </li>
         <li>
-          <img src="/assets/images/preview.png" alt="">
+          <img src="http://frontendlw.github.io/yata-static/assets/images/preview.png" alt="">
           <span class="cs-themes-actions">
             <a href="javascript:;" title="Ver">Ver</a>
             <a href="javascript:;" title="Aplicar">Aplicar</a>
           </span>
         </li>
         <li>
-          <img src="/assets/images/preview.png" alt="">
+          <img src="http://frontendlw.github.io/yata-static/assets/images/preview.png" alt="">
           <span class="cs-themes-actions">
             <a href="javascript:;" title="Ver">Ver</a>
             <a href="javascript:;" title="Aplicar">Aplicar</a>
           </span>
         </li>
         <li>
-          <img src="/assets/images/preview.png" alt="">
+          <img src="http://frontendlw.github.io/yata-static/assets/images/preview.png" alt="">
           <span class="cs-themes-actions">
             <a href="javascript:;" title="Ver">Ver</a>
             <a href="javascript:;" title="Aplicar">Aplicar</a>
           </span>
         </li>
         <li>
-          <img src="/assets/images/preview.png" alt="">
+          <img src="http://frontendlw.github.io/yata-static/assets/images/preview.png" alt="">
           <span class="cs-themes-actions">
             <a href="javascript:;" title="Ver">Ver</a>
             <a href="javascript:;" title="Aplicar">Aplicar</a>
           </span>
         </li>
         <li>
-          <img src="/assets/images/preview.png" alt="">
+          <img src="http://frontendlw.github.io/yata-static/assets/images/preview.png" alt="">
           <span class="cs-themes-actions">
             <a href="javascript:;" title="Ver">Ver</a>
             <a href="javascript:;" title="Aplicar">Aplicar</a>
           </span>
         </li>
         <li>
-          <img src="/assets/images/preview.png" alt="">
+          <img src="http://frontendlw.github.io/yata-static/assets/images/preview.png" alt="">
           <span class="cs-themes-actions">
             <a href="javascript:;" title="Ver">Ver</a>
             <a href="javascript:;" title="Aplicar">Aplicar</a>
           </span>
         </li>
         <li>
-          <img src="/assets/images/preview.png" alt="">
+          <img src="http://frontendlw.github.io/yata-static/assets/images/preview.png" alt="">
           <span class="cs-themes-actions">
             <a href="javascript:;" title="Ver">Ver</a>
             <a href="javascript:;" title="Aplicar">Aplicar</a>
           </span>
         </li>
         <li>
-          <img src="/assets/images/preview.png" alt="">
+          <img src="http://frontendlw.github.io/yata-static/assets/images/preview.png" alt="">
           <span class="cs-themes-actions">
             <a href="javascript:;" title="Ver">Ver</a>
             <a href="javascript:;" title="Aplicar">Aplicar</a>
@@ -615,17 +611,155 @@
       </ul>
     </form>
   </section>
+        <div id="ember798" class="ember-view">
+      	<input type="checkbox" name="cs-sidebar-new-page" id="cs-sidebar-new-page" data-ember-action="799">
+				<div class="cs-sidebar-new-page">
+				  <div class="input cs-inline-block">
+				    <label class="cs-block" for="cs-page-new-page-title">Título da página</label>
+				    <input type="text" id="cs-page-new-page-title">
+				  </div>
+
+				  <div class="checkbox cs-float-r">
+				    <label class="cs-block" for="cs-page-new-page-show">Exibir no menu?</label>
+				    <input type="checkbox" class="cs-check-toggle" checked="checked" id="cs-page-new-page-show">
+				    <label for="cs-page-new-show"></label>
+				  </div>
+
+				  <div class="textarea">
+				    <label class="cs-block" for="cs-page-new-page-description">Descrição da página para Google</label>
+				    <textarea cols="72" rows="5" id="cs-page-new-page-description"></textarea>
+				  </div>
+
+				  <div class="select">
+				    <label for="cs-page-new-page-parent">Inserir abaixo de</label>
+				    <select id="cs-page-new-page-parent">
+				      <option>Selecione</option>
+				      <option>Sobre</option>
+				      <option>Contato</option>
+				    </select>
+				  </div>
+
+				  <hr>
+
+				    <input type="checkbox" id="cs-page-new-config">
+				    <label for="cs-page-new-config">Configurações avançadas</label>
+				    <div class="cs-page-new-config">
+				      <h4>Endereço da página</h4>
+				      <p>
+				        O Google reconhece este endereço, por isso evite alterar com frequência.<br>
+				        Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos
+				      </p>
+				      <div class="input">
+				        <label>
+				          http://meusite.com.br/
+				          <input type="text" placeholder="pagina-teste">
+				        </label>
+				      </div>
+
+				      <div class="checkbox cs-inline-block">
+				        <label class="cs-block" for="cs-page-new-page-off-search">
+				          Esconder página dos buscadores. Google, Bing, Yahoo, etc.
+				        </label>
+				        <input type="checkbox" class="cs-check-toggle" id="cs-page-new-page-off-search">
+				        <label for="cs-page-new-page-off-search"></label>
+				      </div>
+				    </div>
+
+				    <hr>
+
+				  <footer class="cs-sidebar-footer">
+					  <button data-ember-action="800" class="cs-btn-primary">Salvar</button>
+					  <label class="cs-btn" for="cs-sidebar-new-page">Cancelar</label>
+				  </footer>  
+
+				</div>
+			</div>
+
+
+      <div id="ember801" class="ember-view">
+      	<input type="checkbox" name="cs-sidebar-new-page" id="cs-sidebar-new-link" data-ember-action="802">
+				<div class="cs-sidebar-new-page">
+				  <div class="input cs-inline-block">
+				    <label class="cs-block" for="cs-page-new-link-title">Título da página</label>
+				    <input type="text" id="cs-page-new-link-title">
+				  </div>
+
+				  <div class="checkbox cs-float-r">
+				    <label class="cs-block" for="cs-page-new-link-show">Exibir no menu?</label>
+				    <input type="checkbox" class="cs-check-toggle" checked="checked" id="cs-page-new-link-show">
+				    <label for="cs-page-new-show"></label>
+				  </div>
+
+				  <div class="textarea">
+				    <label class="cs-block" for="cs-page-new-link-description">Descrição da página para Google</label>
+				    <textarea cols="72" rows="5" id="cs-page-new-link-description"></textarea>
+				  </div>
+
+				  <div class="select">
+				    <label for="cs-page-new-link-parent">Inserir abaixo de</label>
+				    <select id="cs-page-new-link-parent">
+				      <option>Selecione</option>
+				      <option>Sobre</option>
+				      <option>Contato</option>
+				    </select>
+				  </div>
+
+				  <hr>
+
+				  <button data-ember-action="803">Criar página</button>
+				  <label class="cs-float-r" for="cs-sidebar-new-link">Cancelar</label>
+				</div>
+			</div>
+  <div id="ember653" class="ember-view"><input type="checkbox" name="cs-sidebar-new-page" id="cs-sidebar-new-link" data-ember-action="654">
+	<div class="cs-sidebar-new-page">
+	  <div class="input cs-inline-block">
+	    <label class="cs-block" for="cs-page-new-link-title">Título da página</label>
+	    <input type="text" id="cs-page-new-link-title">
+	  </div>
+
+	  <div class="checkbox cs-float-r">
+	    <label class="cs-block" for="cs-page-new-link-show">Exibir no menu?</label>
+	    <input type="checkbox" class="cs-check-toggle" checked="checked" id="cs-page-new-link-show">
+	    <label for="cs-page-new-show"></label>
+	  </div>
+
+	  <div class="textarea">
+	    <label class="cs-block" for="cs-page-new-link-description">Descrição da página para Google</label>
+	    <textarea cols="72" rows="5" id="cs-page-new-link-description"></textarea>
+	  </div>
+
+	  <div class="select">
+	    <label for="cs-page-new-link-parent">Inserir abaixo de</label>
+	    <select id="cs-page-new-link-parent">
+	      <option>Selecione</option>
+	      <option>Sobre</option>
+	      <option>Contato</option>
+	    </select>
+	  </div>
+
+	  <hr>
+
+	  <button data-ember-action="655">Criar página</button>
+	  <label class="cs-float-r" for="cs-sidebar-new-link">Cancelar</label>
+	</div>
+</div>
 </sidebar>
 
 
     <div class="cs-page">
-
+      <div class="image-fake">
+        <img src="http://frontendlw.github.io/yata-static/assets/images/content-fake.png" alt="Conteúdo fake">
+      </div>
     </div>
   </main>
 
 
-  	<script src="/assets/javascripts/libs/jquery-2.1.0.min.js" type="text/javascript"></script><script src="/assets/javascripts/all.js" type="text/javascript"></script>
+  
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="http://frontendlw.github.io/yata-static/assets/javascripts/all.js"></script>
   </body>
 </html>
+
 
 

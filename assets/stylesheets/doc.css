@@ -1,4 +1,56 @@
-/* line 1, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+/* line 5, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+.cs-nav-color [class*="cs-color"] {
+  display: inline-block;
+  color: #fff;
+  margin: 10px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  width: 100px;
+  font-size: 14px; }
+  /* line 16, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+  .cs-nav-color [class*="cs-color"]:first-child {
+    margin-left: 0; }
+/* line 19, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+.cs-nav-color br + [class*="cs-color"] {
+  margin-left: 0; }
+/* line 22, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+.cs-nav-color .cs-color-1 {
+  background: #01b1e7; }
+/* line 25, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+.cs-nav-color .cs-color-2 {
+  background: #001a22; }
+/* line 28, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+.cs-nav-color .cs-color-3 {
+  background: #d1f1fb;
+  color: #333; }
+/* line 32, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+.cs-nav-color .cs-color-4 {
+  background: #0096c4; }
+/* line 35, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+.cs-nav-color .cs-color-5 {
+  background: #3d5057; }
+/* line 38, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+.cs-nav-color .cs-color-6 {
+  background: #001f29; }
+/* line 41, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+.cs-nav-color .cs-color-7 {
+  background: #000e12; }
+/* line 44, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+.cs-nav-color .cs-color-8 {
+  background: #002c39; }
+/* line 47, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+.cs-nav-color .cs-color-gray-1 {
+  background: #ccc; }
+/* line 50, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+.cs-nav-color .cs-color-gray-2 {
+  background: #f5f5f5;
+  color: #333; }
+/* line 54, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+.cs-nav-color .cs-color-gray-3 {
+  background: #666; }
+
+/* line 57, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
 .cs-doc-nav {
   position: fixed;
   top: 0;
@@ -7,27 +59,30 @@
   width: 175px;
   background: #f9f9f9;
   min-height: 100%; }
-  /* line 10, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+  /* line 66, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
   .cs-doc-nav li {
     border-bottom: 1px solid #e0e0e0; }
-  /* line 13, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+    /* line 69, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+    .cs-doc-nav li:hover {
+      background: #c6c6c6; }
+  /* line 72, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
   .cs-doc-nav a {
     padding: 5px 10px;
     color: #000;
     text-decoration: none;
     display: block; }
 
-/* line 22, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+/* line 81, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
 .cs-doc-elements {
   float: right;
   margin-right: 25px;
   width: calc( 100% - 220px); }
-  /* line 27, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+  /* line 86, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
   .cs-doc-elements .title {
     margin-bottom: 20px;
     font-size: 20px; }
 
-/* line 31, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+/* line 90, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
 #icones li {
   display: inline-block;
   font-size: 16px;
@@ -37,23 +92,23 @@
   text-align: center;
   width: 24%; }
 
-/* line 40, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+/* line 99, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
 #icones li:before {
   display: block;
   margin-bottom: 5px;
   font-size: 30px; }
 
-/* line 45, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+/* line 104, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
 .dark {
   background: #001b23;
   padding: 10px 20px; }
-  /* line 49, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+  /* line 108, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
   .dark h2, .dark h3 {
     color: #fff;
     font-weight: 400;
     margin-bottom: 10px; }
 
-/* line 54, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
+/* line 113, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_doc.sass */
 hr {
   border-top: 1px solid #ccc;
   margin: 30px 0; }
