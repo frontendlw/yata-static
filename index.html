@@ -137,7 +137,7 @@
   <form action="">
     <h2 class="cs-title">Fundo do Site</h2>
     <fieldset class="cs-fieldset">
-      <div class="cs-field">
+      <div class="cs-label">
         <div class="cs-dropdown-secondary cs-dropdown-background">
           <a href="#" class="cs-btn">
             <img src="http://www.mycutegraphics.com/backgrounds/summer/th-popsicle-background.gif" alt="">
@@ -166,11 +166,11 @@
           </ul>
         </div>
       </div>
-      <div class="cs-field">
+      <div class="cs-label">
         <label for="cs-site-file" class="cs-ico-upload">Enviar imagem</label>
         <input type="file" name="cs-site-file" id="cs-site-file">
       </div>
-      <div class="cs-field">
+      <div class="cs-label">
         <label>Formatação</label>
         <div class="cs-custom-select-secondary cs-size-small">
           <select class="ls-select" id="cs-site-repeat">
@@ -611,105 +611,113 @@
       </ul>
     </form>
   </section>
-        <div id="ember798" class="ember-view">
-      	<input type="checkbox" name="cs-sidebar-new-page" id="cs-sidebar-new-page" data-ember-action="799">
-				<div class="cs-sidebar-new-page">
-				  <div class="input cs-inline-block">
-				    <label class="cs-block" for="cs-page-new-page-title">Título da página</label>
-				    <input type="text" id="cs-page-new-page-title">
-				  </div>
+  <div id="ember798" class="ember-view">
+  <input type="checkbox" name="cs-sidebar-new-page" id="cs-sidebar-new-page" data-ember-action="799">
+  <div class="cs-sidebar-new-page">
+    <h2 class="cs-sidebar-title">Adicionar páginas</h2>
+    <p>Lorem ipsum dolor sit amet</p>
 
-				  <div class="checkbox cs-float-r">
-				    <label class="cs-block" for="cs-page-new-page-show">Exibir no menu?</label>
-				    <input type="checkbox" class="cs-check-toggle" checked="checked" id="cs-page-new-page-show">
-				    <label for="cs-page-new-show"></label>
-				  </div>
+    <div class="cs-fieldset">
 
-				  <div class="textarea">
-				    <label class="cs-block" for="cs-page-new-page-description">Descrição da página para Google</label>
-				    <textarea cols="72" rows="5" id="cs-page-new-page-description"></textarea>
-				  </div>
+      <div class="cs-field-inline">
+        <label class="cs-label">
+          <b class="cs-text-label">Título da página</b>
+          <input type="text" class="cs-field" placeholder="Dica: max: 70 caracteres">
+        </label>
 
-				  <div class="select">
-				    <label for="cs-page-new-page-parent">Inserir abaixo de</label>
-				    <select id="cs-page-new-page-parent">
-				      <option>Selecione</option>
-				      <option>Sobre</option>
-				      <option>Contato</option>
-				    </select>
-				  </div>
+        <label class="cs-label">
+          <b class="cs-text-label">Exibir no menu?</b>
+         <div class="cs-group-btn cs-group-active">
+            <input type="radio" id="radio1" name="radio">
+            <label for="radio1" class="cs-btn">Sim</label>
+            <input type="radio" id="radio2" checked name="radio">
+            <label for="radio2" class="cs-btn">Não</label>
+          </div>
+        </label>
+      </div>
 
-				  <hr>
+      <label class="cs-label">
+        <b class="cs-text-label">Descrição da página para Google</b>
+        <textarea cols="72" rows="8" class="cs-field" placeholder="Esta é a descrição que será exibida no Google e em outros buscadores."></textarea>
+      </label>
 
-				    <input type="checkbox" id="cs-page-new-config">
-				    <label for="cs-page-new-config">Configurações avançadas</label>
-				    <div class="cs-page-new-config">
-				      <h4>Endereço da página</h4>
-				      <p>
-				        O Google reconhece este endereço, por isso evite alterar com frequência.<br>
-				        Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos
-				      </p>
-				      <div class="input">
-				        <label>
-				          http://meusite.com.br/
-				          <input type="text" placeholder="pagina-teste">
-				        </label>
-				      </div>
+      <label class="cs-label-block">
+        <b class="cs-text-label">Endereço da página</b>
+        <div class="cs-prefix-group">
+          <span class="cs-prefix">http://meusite.com.br/</span>
+          <input class="cs-field">
+        </div>
+      </label>
 
-				      <div class="checkbox cs-inline-block">
-				        <label class="cs-block" for="cs-page-new-page-off-search">
-				          Esconder página dos buscadores. Google, Bing, Yahoo, etc.
-				        </label>
-				        <input type="checkbox" class="cs-check-toggle" id="cs-page-new-page-off-search">
-				        <label for="cs-page-new-page-off-search"></label>
-				      </div>
-				    </div>
-
-				    <hr>
-
-				  <footer class="cs-sidebar-footer">
-					  <button data-ember-action="800" class="cs-btn-primary">Salvar</button>
-					  <label class="cs-btn" for="cs-sidebar-new-page">Cancelar</label>
-				  </footer>  
-
-				</div>
-			</div>
+      <label class="cs-label-block">
+        <b class="cs-text-label">Inserir abaixo de:</b>
+        <div class="cs-custom-select">
+          <select id="cs-page-new-page-parent">
+            <option>Selecione</option>
+            <option>Produtos</option>
+            <option>Contato</option>
+          </select>
+        </div>
+      </label>
 
 
-      <div id="ember801" class="ember-view">
-      	<input type="checkbox" name="cs-sidebar-new-page" id="cs-sidebar-new-link" data-ember-action="802">
-				<div class="cs-sidebar-new-page">
-				  <div class="input cs-inline-block">
-				    <label class="cs-block" for="cs-page-new-link-title">Título da página</label>
-				    <input type="text" id="cs-page-new-link-title">
-				  </div>
+      <label class="cs-label-block">
+        <b class="cs-text-label">Esconder dos buscadores. Google, Bing, Yahoo, etc.</b>
+       <div class="cs-group-btn cs-group-active">
+          <input type="radio" id="radio3" name="radio2">
+          <label for="radio3" class="cs-btn">Sim</label>
+          <input type="radio" id="radio4" checked name="radio2">
+          <label for="radio4" class="cs-btn">Não</label>
+        </div>
+      </label>
+  
+      <a href="" class="cs-fanpage">Adicionar página do site à FanPage</a>
 
-				  <div class="checkbox cs-float-r">
-				    <label class="cs-block" for="cs-page-new-link-show">Exibir no menu?</label>
-				    <input type="checkbox" class="cs-check-toggle" checked="checked" id="cs-page-new-link-show">
-				    <label for="cs-page-new-show"></label>
-				  </div>
+    </div>
 
-				  <div class="textarea">
-				    <label class="cs-block" for="cs-page-new-link-description">Descrição da página para Google</label>
-				    <textarea cols="72" rows="5" id="cs-page-new-link-description"></textarea>
-				  </div>
+    <footer class="cs-sidebar-footer">
+      <button data-ember-action="800" class="cs-btn-primary">Adicionar</button>
+      <label class="cs-btn" for="cs-sidebar-new-page">Cancelar</label>
+    </footer>  
 
-				  <div class="select">
-				    <label for="cs-page-new-link-parent">Inserir abaixo de</label>
-				    <select id="cs-page-new-link-parent">
-				      <option>Selecione</option>
-				      <option>Sobre</option>
-				      <option>Contato</option>
-				    </select>
-				  </div>
+  </div>
+</div>
 
-				  <hr>
 
-				  <button data-ember-action="803">Criar página</button>
-				  <label class="cs-float-r" for="cs-sidebar-new-link">Cancelar</label>
-				</div>
-			</div>
+<div id="ember801" class="ember-view">
+  <input type="checkbox" name="cs-sidebar-new-page" id="cs-sidebar-new-link" data-ember-action="802">
+  <div class="cs-sidebar-new-page">
+    <div class="input cs-inline-block">
+      <label class="cs-block" for="cs-page-new-link-title">Título da página</label>
+      <input type="text" id="cs-page-new-link-title">
+    </div>
+
+    <div class="checkbox cs-float-r">
+      <label class="cs-block" for="cs-page-new-link-show">Exibir no menu?</label>
+      <input type="checkbox" class="cs-check-toggle" checked="checked" id="cs-page-new-link-show">
+      <label for="cs-page-new-show"></label>
+    </div>
+
+    <div class="textarea">
+      <label class="cs-block" for="cs-page-new-link-description">Descrição da página para Google</label>
+      <textarea cols="72" rows="5" id="cs-page-new-link-description"></textarea>
+    </div>
+
+    <div class="select">
+      <label for="cs-page-new-link-parent">Inserir abaixo de</label>
+      <select id="cs-page-new-link-parent">
+        <option>Selecione</option>
+        <option>Sobre</option>
+        <option>Contato</option>
+      </select>
+    </div>
+
+    <hr>
+
+    <button data-ember-action="803">Criar página</button>
+    <label class="cs-float-r" for="cs-sidebar-new-link">Cancelar</label>
+  </div>
+</div>
   <div id="ember653" class="ember-view"><input type="checkbox" name="cs-sidebar-new-page" id="cs-sidebar-new-link" data-ember-action="654">
 	<div class="cs-sidebar-new-page">
 	  <div class="input cs-inline-block">
