@@ -1,36 +1,56 @@
 input.cs-check-toggle
   @extend input[id*="cs-sidebar-nav-"]
+  clip: auto
+  left: 0
+  width: 60px
+  height: 40px
+  top: 18px
+  opacity: 0
+  cursor: pointer
 
   + label
-    cursor: pointer
-    border: 1px solid lighten($colorBlack, 20)
     &:before,
     &:after
-      display: inline-block
-      border: 2px solid transparent
+      @extend %button
+      @extend .cs-btn
+      width: 56px
 
     &:before
       content: "Sim"
+      border-bottom-right-radius: 0
+      border-top-right-radius: 0
 
     &:after
+      @extend %btn-active
+      border-bottom-left-radius: 0
+      border-top-left-radius: 0
+      background: $colorGray2
+      margin-left: -1px
       content: "Não"
-      border-color: $colorBlack
-      
+      font-weight: 700
+      padding-top: 6px
+      font-size: 13px
+
 
   &:checked
+    left: 56px
+
     + label
       &:before
-        border-color: $colorBlack
+        @extend %btn-active
 
       &:after
-        border-color: transparent
+        background: transparent
+        box-shadow: none
+        font-weight: 300
+        font-family: 14px
 
 
 .cs-field
   display: inline-block
   vertical-align: super
   border-radius: $radiusDefault
-  height: $heightDefault 
+  height: $heightDefault
   padding: 6px 15px
   font-size: 14px
   color: $colorBlue2
@@ -44,6 +64,7 @@ input.cs-check-toggle
 .cs-text-label
   color: $colorGray3
   display: block
+  font-weight: bold
   font-size: 14px
   margin-bottom: 6px
 
@@ -51,7 +72,7 @@ input.cs-check-toggle
   margin-bottom: 25px
   display: inline-block
   vertical-align: top
-  
+
 
   .cs-sidebar-nav-appearance &
     vertical-align: middle
@@ -79,10 +100,10 @@ input.cs-check-toggle
     &:not(:first-child)
       border-left: 0
 
-  .cs-field:first-child, 
+  .cs-field:first-child,
   .cs-prefix:first-child
     border-radius: $radiusDefault 0 0 $radiusDefault
-  
+
   .cs-prefix
     @include ellipsis(50%)
     background-color: $colorGray2
@@ -96,7 +117,7 @@ input.cs-check-toggle
     + .cs-field
       border-radius: 0
 
-  .cs-field:last-child, 
+  .cs-field:last-child,
   .cs-prefix:last-child
     border-radius: 0 $radiusDefault $radiusDefault 0
 

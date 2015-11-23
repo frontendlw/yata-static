@@ -68,3 +68,23 @@
   padding: 20px
   border: 1px solid $colorGray1
   background: $colorWhite
+
+%button
+  @include appearance(none)
+  @extend %animate-default
+  @extend %font-smoothing
+  height: $heightDefault
+  cursor: pointer
+  border: none
+  padding: 5px 14px
+  border-radius: $radiusDefault
+  background: #fff
+  display: inline-block
+  font-size: 15px
+  line-height: 1.42857143
+  text-decoration: none
+  text-align: center
+  white-space: normal
+  color: $colorGray3
+  vertical-align: middle
+  font-weight: normal
