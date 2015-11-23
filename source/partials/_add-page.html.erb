@@ -13,15 +13,12 @@
           <input type="text" id="title-page" class="cs-field" placeholder="Dica: max: 70 caracteres">
         </label>
 
-        <label class="cs-label">
-          <b class="cs-text-label">Exibir no menu?</b>
-         <div class="cs-group-btn cs-group-active">
-            <input type="radio" id="radio1" checked name="radio">
-            <label for="radio1" class="cs-btn">Sim</label>
-            <input type="radio" id="radio2"  name="radio">
-            <label for="radio2" class="cs-btn">Não</label>
-          </div>
-        </label>
+        <div class="cs-group-btn cs-label">
+          <label class="cs-text-label" for="cs-page-new-link-show">Exibir no menu?</label>
+          <input type="checkbox" class="cs-check-toggle" checked="checked" id="cs-page-new-link-show">
+          <label for="cs-page-new-show"></label>
+        </div>
+
       </div>
 
       <label class="cs-label">
@@ -53,7 +50,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
       </label>
 
 
-      <label class="cs-label-block">
+     <!--  <label class="cs-label-block">
         <b class="cs-text-label">Esconder dos buscadores. Google, Bing, Yahoo, etc.</b>
        <div class="cs-group-btn cs-group-active">
           <input type="radio" id="radio3" name="radio2">
@@ -61,7 +58,13 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
           <input type="radio" id="radio4" checked name="radio2">
           <label for="radio4" class="cs-btn">Não</label>
         </div>
-      </label>
+      </label> -->
+
+      <div class="cs-group-btn cs-label">
+        <label class="cs-text-label" for="show-search-1">Esconder dos buscadores. Google, Bing, Yahoo, etc.</label>
+        <input type="checkbox" class="cs-check-toggle" id="show-search-1">
+        <label for="cs-page-new-show"></label>
+      </div>
 
       <p>
         <a href="" class="cs-fanpage">Adicionar página do site à FanPage</a> <a href="#" class="cs-tooltip-top" aria-label="Importante: para utilizar este recurso você já teve ter criado uma fanpage no facebook. Ao ativar está opção, está página do seu site será exibida como uma aba na sua fanpage do facebook, você pode incluir apenas uma página do site por conta.">
