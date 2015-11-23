@@ -1,3 +1,6 @@
 /*
 *=require _doc
 */
+body {
+  overflow: auto;
+}
