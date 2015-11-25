@@ -116,3 +116,6 @@ hr {
 
 */
 
+body {
+  overflow: auto;
+}
