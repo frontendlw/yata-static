@@ -1,0 +1,338 @@
+.cs-modal
+  border-radius: $radiusDefault
+  position: fixed
+  font-size: 14px
+  top: 50%
+  left: 50%
+  width: 90%
+  // height: 80%
+  max-width: 930px
+  max-height: 600px
+  padding-bottom: 70px
+  opacity: 0
+  z-index: -1
+  background: $colorWhite
+  @include transform(translate(-50%, -50%))
+
+.cs-modal-header,
+.cs-modal-content,
+.cs-modal-footer
+  padding: 30px
+
+.cs-modal-header
+  background: $colorGray2
+  border-radius: $radiusDefault $radiusDefault 0 0
+  border-bottom: 1px solid $colorGray1
+  position: relative
+
+  .cs-ico-close
+    color: mix($colorBlack, $colorGray1, 10%) 
+    text-decoration: none
+    font-size: 9px
+    position: absolute
+    right: 30px
+    top: 50%
+    margin-top: -6px
+
+    &:hover,
+    &:focus
+      color: mix($colorWhite, $colorGray3, 20%) 
+
+.cs-modal-title
+  @extend %font-smoothing
+  color: $colorBase1
+  font-size: 22px
+  font-weight: 300
+
+  p 
+    color: $colorGray3 
+
+.cs-modal-footer
+  @extend .cs-modal-header
+  border-radius: 0 0 $radiusDefault $radiusDefault 
+  border-top: 1px solid $colorGray1
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  text-align: right
+
+.cs-modal-content
+  padding: 10px 30px
+  display: table 
+  width: 100%
+
+.cs-modal-overlay
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+  z-index: -1
+  background: rgba($colorBlack, 0.8)
+
+//modal image widget
+$tab-itens: send, my, free, instagram
+$tab-duration: 0s
+$tab-timing: ease-in-out
+
+input[name="cs-image-tabs"]
+  @extend input[id*="cs-sidebar-nav-"]
+
+@each $tab-item in $tab-itens
+  input[id="cs-image-tab-#{$tab-item}"]:checked
+    + label
+      border-bottom: 4px solid $colorBase1
+      position: relative
+      padding-bottom: 7px
+      font-weight: 700
+      z-index: 2
+    
+    ~
+      .cs-image-tabs
+        .cs-image-tab-#{$tab-item}
+          position: relative
+          visibility: visible
+          opacity: 1
+
+.cs-modal-tab
+  display: table
+  width: 100%
+  padding-bottom: 25px 
+
+  > label 
+    margin-right: 60px
+
+    &:last-child
+      margin-right: 0
+
+.cs-image-tabs
+  margin: 10px -30px 0
+  padding: 0 30px 20px  
+  border-top: 1px solid $colorGray1
+  position: relative
+  z-index: 1
+
+.cs-image-tab
+  position: absolute
+  top: 0
+  left: 0
+  opacity: 0
+  visibility: hidden
+
+.cs-preview-image
+  float: left
+  text-align: center
+  padding-top: 40px
+  width: 360px
+
+  .cs-preview-image-wrap
+    display: inline-block
+    padding: 15px 15px 0
+    position: relative
+
+    [class*="cs-preview-arrow"]
+      position: absolute
+      color: rgba($colorGray3, .5)
+
+      &:before
+        position: absolute
+        font-family: 'yata'
+        content: "\e918"
+        font-size: 20px
+        color: $colorBase1
+
+    .cs-preview-arrow-x
+      top: -25px
+      width:  calc(100% - 30px)
+
+      &:before
+        @include transform(translateX(-50%))
+        top: 15px
+        left: 50%
+
+    .cs-preview-arrow-y
+      @include transform(rotate(90deg) translateY(-50%))
+      right: -50px 
+      top: 50%
+
+      &:before
+        right: 50%
+        top: 17px
+
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      border-color: $colorBase1
+      border-width: 1px
+
+    &:before
+      border-top-style: solid
+      width: calc(100% - 30px)
+      top: 0
+      left: 15px 
+
+    &:after
+      border-right-style: solid 
+      height: calc(100% - 18px)
+      right: 0
+      top: 15px
+
+  img
+    max-width: 100%
+    max-height: 260px
+
+  [class*="cs-btn"]
+    @include transform(translate(-50%))
+    position: absolute
+    top: 50%
+    margin-top: -15px
+    left: 50%
+    width: 150px
+
+.cs-config-image
+  float: right
+  padding-top: 30px
+  width: 465px
+
+  .cs-field-inline
+
+    .cs-label:first-child
+      width: 63%
+
+    .cs-group-btn
+      float: right
+
+    .cs-check-toggle + label
+      &:before,
+      &:after
+        width: 75px
+
+//tab enviar
+.cs-image-drop
+  position: relative
+  display: block
+  margin: 0 auto
+  max-width: 600px
+  height: 200px
+
+  .cs-image-area,
+  .cs-image-area:after
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 1
+    z-index: 1
+    background: url(/assets/images/temp-bg-upload.png) no-repeat center center
+
+  .cs-image-area:after
+    content: ""
+    opacity: 0
+    background-color: rgba($colorBlack, 0.8)
+    background-image: url(/assets/images/loading.gif)
+
+  input
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 2
+    opacity: 0
+    cursor: pointer
+
+  input:hover,
+  input.is-hover
+    + .cs-image-area
+      background-size: 50%
+
+  input.is-loading
+    + .cs-image-area
+      background-size: auto
+      &:after
+        opacity: 1
+
+//tab minhas imagens
+//.cs-image-tab-my
+
+.cs-image-list
+  max-height: 300px
+  overflow: auto
+
+  li
+    position: relative
+    width: 16.66%
+    padding: 7px 6px
+
+  img
+    position: absolute
+    left: 50%
+    top: 50%
+    width: 110%
+    @include transform(translate(-50%, -50%))
+
+  .cs-image-delete
+    position: absolute
+    top: 10px
+    right: 10px
+    color: red
+    text-shadow: 0 0 2px $colorWhite
+    z-index: 3
+    opacity: 0
+    visibility: hidden
+
+  li:hover .cs-image-delete
+    visibility: visible
+    opacity: 1
+
+  .cs-image-item
+    position: relative
+    display: block
+    padding-top: 59%
+    overflow: hidden
+
+    &:after
+      content: ""
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      background: transparent
+      border: 2px solid rgba($colorBlack, 0.5)
+      z-index: 2
+
+  // .cs-image-item:hover:after
+  //   border-color: blue
+  //   background: rgba($colorBlack, 0.8)
+
+  input[type="radio"]
+    @extend input[id*="cs-sidebar-nav-"]
+
+    &:checked + label:after
+      border-color: $colorBase1
+      background: rgba($colorBlack, 0.8) url(/assets/images/temp-icon-selected.png) no-repeat center center
+
+//tab instagram
+.cs-link-instagram
+  margin: 0 auto
+  width: 184px
+  height: 52px
+  background: url(/assets/images/logo-instagram.png) no-repeat
+
+//animate keyframes
+
+.cs-open-modal
+  .cs-modal-overlay
+    z-index: 10
+
+.cs-modal.opened
+  @include animation(fadeIn 0.8s)
+  opacity: 1
+  z-index: 11
+
