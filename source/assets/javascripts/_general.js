@@ -97,7 +97,7 @@ yata.general = (function() {
 
 
   function positionArrow(elem){
-    var posY = $(elem).offset().top - 100;
+    var posY = $(elem).offset().top - 50;
     $('.cs-sidebar-new-page .cs-sidebar-arrow').css({ top: posY });
   }
 
