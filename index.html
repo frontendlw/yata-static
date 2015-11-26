@@ -115,7 +115,7 @@
   <div id="ember553d" data-kind="form" class="cs-ico-video ember-view cs-sidebar-widget ui-draggable ui-draggable-handle">
   Vídeo
   </div>
-  <div id="ember553e" data-kind="form" class="cs-disabled cs-ico-ok ember-view cs-sidebar-widget ui-draggable ui-draggable-handle">
+  <div id="ember553e" data-kind="form" class="cs-ico-ok ember-view cs-sidebar-widget ui-draggable ui-draggable-handle">
   Botão
   </div>
   <div id="ember553f" data-kind="form" class="cs-ico-form ember-view cs-sidebar-widget ui-draggable ui-draggable-handle">
@@ -451,33 +451,34 @@
   <label for="cs-sidebar-new-link" class="cs-btn-secondary cs-btn-center">Adicionar link externo</label>
 
   <div id="ember607" class="ember-view cs-pages-list ui-sortable">
-      <ul class="cs-list-pages" id="sortable">
-          <li id="ember725" data-id="-K1f9iG2xc7bDOgNP6I2" class="ember-view ui-state-disabled cs-pages-list-item">
-
+    <ul class="cs-list-pages" id="sortable">
+      <li id="ember725" data-id="-K1f9iG2xc7bDOgNP6I2" class="ember-view ui-state-disabled cs-pages-list-item">
           <a id="ember726" href="" class="cs-pages-link ember-view"><span class="cs-ico-home"></span>Home</a>
-              <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
-              <a href="" class="cs-ico-config" title="Configurar página"></a>
-          </li>
-          <li id="ember617" data-id="-K1KYuAfIAnz5bLr3zE6" class="ember-view ui-state-default cs-pages-list-item ">
-
-              <a id="ember618" href="" class="cs-pages-link ember-view cs-page-hidden"><span class="cs-ico-drag"></span> Produtos <em>(oculto)</em></a>
-              <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
-              <a href="" class="cs-ico-config" title="Configurar página"></a>
-          </li>
-          </li>
-          <li id="ember755" data-id="-K1d75cfq5d9qvWUQYX4"  class="ember-view ui-state-default cs-pages-list-item">
-                <a id="ember756" href="" class="cs-pages-link ember-view"><span class="cs-ico-drag"></span>Contato</a>
-              <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
-              <a href="" class="cs-ico-config" title="Configurar página"></a>
-          </li>
-          <li id="ember752" data-id="-K1aNA0KHHNAxOdse4Oj" class="ember-view ui-state-default cs-pages-list-item">
-              <a id="ember753" href="" class="cs-pages-link ember-view cs-page-hidden"><span class="cs-ico-drag"></span>Links Úteis <em>(oculto)</em></a>
-              <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
-              <a href="" class="cs-ico-config" title="Configurar página"></a>
-            </div>
-          </li>
-      </ul>
-
+          <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
+          <a href="" class="cs-ico-config" title="Configurar página" data-target="#cs-sidebar-edit-page-1"></a>
+      </li>
+      <li id="ember617" data-id="-K1KYuAfIAnz5bLr3zE6" class="ember-view ui-state-default cs-pages-list-item ">
+          <a id="ember618" href="" class="cs-pages-link ember-view"><span class="cs-ico-drag"></span>Sobre</a>
+          <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
+          <a href="" class="cs-ico-config" title="Configurar página" data-target="#cs-sidebar-edit-page-2"></a>
+      </li>
+      </li>
+      <li id="ember755" data-id="-K1d75cfq5d9qvWUQYX4"  class="ember-view ui-state-default cs-pages-list-item">
+          <a id="ember756" href="" class="cs-pages-link ember-view"><span class="cs-ico-drag"></span>Clientes</a>
+          <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
+          <a href="" class="cs-ico-config" title="Configurar página" data-target="#cs-sidebar-edit-page-3"></a>
+      </li>
+      <li id="ember752" data-id="-K1aNA0KHHNAxOdse4Oj" class="ember-view ui-state-default cs-pages-list-item">
+          <a id="ember753" href="" class="cs-pages-link ember-view"><span class="cs-ico-drag"></span>Contato</a>
+          <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
+          <a href="" class="cs-ico-config" title="Configurar página" data-target="#cs-sidebar-edit-page-4"></a>
+      </li>
+      <li id="page-event" data-id="-K1aNA0KHHNAxOdse4Oj" class="ember-view ui-state-default cs-pages-list-item hide">
+          <a id="ember753" href="" class="cs-pages-link ember-view"><span class="cs-ico-drag"></span>Eventos</a>
+          <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
+          <a href="" class="cs-ico-config" title="Configurar página" data-target="#cs-sidebar-edit-page-5"></a>
+      </li>
+    </ul>
   </div>
 </div>
 
@@ -625,7 +626,7 @@
       <div class="cs-field-inline">
         <label class="cs-label">
           <b class="cs-text-label">Título da página</b>
-          <input type="text" id="title-page" class="cs-field" placeholder="Dica: max: 70 caracteres">
+          <input type="text" id="title-page" class="cs-field test-title" placeholder="Dica: max: 70 caracteres">
         </label>
 
         <div class="cs-group-btn cs-label">
@@ -650,7 +651,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
         </b>
         <div class="cs-prefix-group">
           <span class="cs-prefix">http://meusite.com.br/</span>
-          <input class="cs-field" id="url-page">
+          <input class="cs-field test-url" id="url-page">
         </div>
       </label>
 
@@ -692,86 +693,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
 
     <footer class="cs-sidebar-footer">
       <button data-ember-action="800" class="cs-btn-primary" id="confirm-add-page">Adicionar</button>
-      <label class="cs-btn" id="cancel-add-page" for="cs-sidebar-new-page">Cancelar</label>
-    </footer>
-
-  </div>
-</div>
-
-  <div id="ember798a" class="ember-view">
-  <input type="checkbox" name="cs-sidebar-new-page"  id="cs-sidebar-edit-page" data-ember-action="799">
-  <div class="cs-sidebar-new-page">
-    <span class="cs-sidebar-arrow"></span>
-    <h2 class="cs-sidebar-title">Configurar páginas</h2>
-    <p>Lorem ipsum dolor sit amet</p>
-
-    <div class="cs-fieldset">
-
-      <div class="cs-field-inline">
-        <label class="cs-label">
-          <b class="cs-text-label">Título da página</b>
-          <input type="text" id="title-page" class="cs-field" placeholder="Dica: max: 70 caracteres">
-        </label>
-
-        <div class="cs-group-btn cs-label">
-          <label class="cs-text-label" for="cs-page-new-link-show-3"><b>Exibir no menu?</b></label>
-          <input type="checkbox" class="cs-check-toggle" checked="checked" id="cs-page-new-link-show-3">
-          <label for="cs-page-new-show"></label>
-        </div>
-      </div>
-
-      <label class="cs-label">
-        <b class="cs-text-label">Descrição da página para Google <a href="" class="cs-tag">ver exemplo</a></b>
-        <textarea cols="72" rows="8" class="cs-field" placeholder="Esta é a descrição que será exibida no Google e em outros buscadores."></textarea>
-      </label>
-
-      <label class="cs-label-block">
-        <b class="cs-text-label">Endereço da página <a href="#" class="cs-tooltip-top" aria-label="O Google reconhece este endereço, por isso evite alterar com frequência.
-Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
-    <span class="cs-help-info"></span>
-  </a></b>
-        <div class="cs-prefix-group">
-          <span class="cs-prefix">http://meusite.com.br/</span>
-          <input class="cs-field" id="url-page">
-        </div>
-      </label>
-
-      <label class="cs-label-block">
-        <b class="cs-text-label">Inserir abaixo de:</b>
-        <div class="cs-custom-select">
-          <select id="cs-page-new-page-parent">
-            <option>Nenhum</option>
-            <option>Produtos</option>
-            <option>Contato</option>
-            <option>Links úteis</option>
-          </select>
-        </div>
-      </label>
-
-<!-- 
-      <div class="cs-group-btn cs-label">
-        <label class="cs-text-label" for="show-search-3"><b>Esconder dos buscadores. Google, Bing, Yahoo, etc.</b></label>
-        <input type="checkbox" class="cs-check-toggle" id="show-search-3">
-        <label for="cs-page-new-show"></label>
-      </div> -->
-
-     <!--  <p>
-        <a href="" class="cs-fanpage">Adicionar página do site à FanPage</a>
-        <span class="cs-ico-check"></span>
-        <a href="" class="cs-link">remover</a>
-      </p> -->
-
-      <p>
-        <a href="" class="cs-fanpage">Adicionar página do site à FanPage</a> <a href="#" class="cs-tooltip-top" aria-label="Importante: para utilizar este recurso você já teve ter criado uma fanpage no facebook. Ao ativar está opção, está página do seu site será exibida como uma aba na sua fanpage do facebook, você pode incluir apenas uma página do site por conta.">
-        <span class="cs-help-info"></span></a>
-      </p>
-
-    </div>
-
-    <footer class="cs-sidebar-footer">
-      <label class="cs-btn-primary" id="cancel-add-page" for="cs-sidebar-edit-page">Salvar</label>
-      <label class="cs-btn" id="cancel-add-page" for="cs-sidebar-edit-page">Cancelar</label>
-      <button class="cs-btn-danger" id="delete-page">Apagar página</button>
+      <label class="cs-btn" id="cancel-add-page" data-event="clear" for="cs-sidebar-new-page">Cancelar</label>
     </footer>
 
   </div>
@@ -840,6 +762,396 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
   </div>
 </div>
 
+  <div id="ember798a" class="ember-view">
+  <input type="checkbox" name="cs-sidebar-new-page"  id="cs-sidebar-edit-page-1" data-ember-action="799">
+  <div class="cs-sidebar-new-page">
+    <span class="cs-sidebar-arrow"></span>
+    <h2 class="cs-sidebar-title">Configurar páginas</h2>
+    <p>Lorem ipsum dolor sit amet</p>
+
+    <div class="cs-fieldset">
+
+      <div class="cs-field-inline">
+        <label class="cs-label">
+          <b class="cs-text-label">Título da página</b>
+          <input type="text" id="title-page" value="Home" class="cs-field test-title" placeholder="Dica: max: 70 caracteres">
+        </label>
+
+        <div class="cs-group-btn cs-label">
+          <label class="cs-text-label" for="cs-page-new-link-show-3"><b>Exibir no menu?</b></label>
+          <input type="checkbox" class="cs-check-toggle" checked="checked" id="cs-page-new-link-show-3">
+          <label for="cs-page-new-show"></label>
+        </div>
+      </div>
+
+      <label class="cs-label">
+        <b class="cs-text-label">Descrição da página para Google <a href="" class="cs-tag">ver exemplo</a></b>
+        <textarea cols="72" rows="8" class="cs-field" placeholder="Esta é a descrição que será exibida no Google e em outros buscadores."></textarea>
+      </label>
+
+      <label class="cs-label-block">
+        <b class="cs-text-label">Endereço da página <a href="#" class="cs-tooltip-top" aria-label="O Google reconhece este endereço, por isso evite alterar com frequência.
+Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
+    <span class="cs-help-info"></span>
+  </a></b>
+        <div class="cs-prefix-group">
+          <span class="cs-prefix">http://meusite.com.br/</span>
+          <input class="cs-field test-url" id="url-page" value="home">
+        </div>
+      </label>
+
+      <!-- <label class="cs-label-block">
+        <b class="cs-text-label">Inserir abaixo de:</b>
+        <div class="cs-custom-select">
+          <select id="cs-page-new-page-parent">
+            <option>Nenhum</option>
+            <option>Produtos</option>
+            <option>Contato</option>
+            <option>Links úteis</option>
+          </select>
+        </div>
+      </label> -->
+
+<!-- 
+      <div class="cs-group-btn cs-label">
+        <label class="cs-text-label" for="show-search-3"><b>Esconder dos buscadores. Google, Bing, Yahoo, etc.</b></label>
+        <input type="checkbox" class="cs-check-toggle" id="show-search-3">
+        <label for="cs-page-new-show"></label>
+      </div> -->
+
+     <!--  <p>
+        <a href="" class="cs-fanpage">Adicionar página do site à FanPage</a>
+        <span class="cs-ico-check"></span>
+        <a href="" class="cs-link">remover</a>
+      </p> -->
+
+      <p>
+        <a href="" class="cs-fanpage">Adicionar página do site à FanPage</a> <a href="#" class="cs-tooltip-top" aria-label="Importante: para utilizar este recurso você já teve ter criado uma fanpage no facebook. Ao ativar está opção, está página do seu site será exibida como uma aba na sua fanpage do facebook, você pode incluir apenas uma página do site por conta.">
+        <span class="cs-help-info"></span></a>
+      </p>
+
+    </div>
+
+    <footer class="cs-sidebar-footer">
+      <label class="cs-btn-primary" id="cancel-add-page" for="cs-sidebar-edit-page-1">Salvar</label>
+      <label class="cs-btn" for="cs-sidebar-edit-page-1">Cancelar</label>
+    </footer>
+
+  </div>
+</div>
+
+  <div id="ember798a" class="ember-view">
+  <input type="checkbox" name="cs-sidebar-new-page"  id="cs-sidebar-edit-page-2" data-ember-action="799">
+  <div class="cs-sidebar-new-page">
+    <span class="cs-sidebar-arrow"></span>
+    <h2 class="cs-sidebar-title">Configurar páginas</h2>
+    <p>Lorem ipsum dolor sit amet</p>
+
+    <div class="cs-fieldset">
+
+      <div class="cs-field-inline">
+        <label class="cs-label">
+          <b class="cs-text-label">Título da página</b>
+          <input type="text" id="title-page" class="cs-field test-title" value="Sobre" placeholder="Dica: max: 70 caracteres">
+        </label>
+
+        <div class="cs-group-btn cs-label">
+          <label class="cs-text-label" for="cs-page-new-link-show-3"><b>Exibir no menu?</b></label>
+          <input type="checkbox" class="cs-check-toggle" checked="checked" id="cs-page-new-link-show-3">
+          <label for="cs-page-new-show"></label>
+        </div>
+      </div>
+
+      <label class="cs-label">
+        <b class="cs-text-label">Descrição da página para Google <a href="" class="cs-tag">ver exemplo</a></b>
+        <textarea cols="72" rows="8" class="cs-field" placeholder="Esta é a descrição que será exibida no Google e em outros buscadores."></textarea>
+      </label>
+
+      <label class="cs-label-block">
+        <b class="cs-text-label">Endereço da página <a href="#" class="cs-tooltip-top" aria-label="O Google reconhece este endereço, por isso evite alterar com frequência.
+Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
+    <span class="cs-help-info"></span>
+  </a></b>
+        <div class="cs-prefix-group">
+          <span class="cs-prefix">http://meusite.com.br/</span>
+          <input class="cs-field test-url" id="url-page" value="sobre">
+        </div>
+      </label>
+
+      <label class="cs-label-block">
+        <b class="cs-text-label">Inserir abaixo de:</b>
+        <div class="cs-custom-select">
+          <select id="cs-page-new-page-parent">
+            <option>Nenhum</option>
+            <option>Contato</option>
+            <option>Links úteis</option>
+          </select>
+        </div>
+      </label>
+
+<!-- 
+      <div class="cs-group-btn cs-label">
+        <label class="cs-text-label" for="show-search-3"><b>Esconder dos buscadores. Google, Bing, Yahoo, etc.</b></label>
+        <input type="checkbox" class="cs-check-toggle" id="show-search-3">
+        <label for="cs-page-new-show"></label>
+      </div> -->
+
+     <!--  <p>
+        <a href="" class="cs-fanpage">Adicionar página do site à FanPage</a>
+        <span class="cs-ico-check"></span>
+        <a href="" class="cs-link">remover</a>
+      </p> -->
+
+      <p>
+        <a href="" class="cs-fanpage">Adicionar página do site à FanPage</a> <a href="#" class="cs-tooltip-top" aria-label="Importante: para utilizar este recurso você já teve ter criado uma fanpage no facebook. Ao ativar está opção, está página do seu site será exibida como uma aba na sua fanpage do facebook, você pode incluir apenas uma página do site por conta.">
+        <span class="cs-help-info"></span></a>
+      </p>
+
+    </div>
+
+    <footer class="cs-sidebar-footer">
+      <label class="cs-btn-primary" id="cancel-add-page" for="cs-sidebar-edit-page-2">Salvar</label>
+      <label class="cs-btn" id="cancel-add-page" for="cs-sidebar-edit-page-2">Cancelar</label>
+      <button class="cs-btn-danger" id="delete-page" data-module="modal" data-target="modal-remove-page">Apagar página</button>
+    </footer>
+
+  </div>
+</div>
+
+  <div id="ember798a" class="ember-view">
+  <input type="checkbox" name="cs-sidebar-new-page"  id="cs-sidebar-edit-page-3" data-ember-action="799">
+  <div class="cs-sidebar-new-page">
+    <span class="cs-sidebar-arrow"></span>
+    <h2 class="cs-sidebar-title">Configurar páginas</h2>
+    <p>Lorem ipsum dolor sit amet</p>
+
+    <div class="cs-fieldset">
+
+      <div class="cs-field-inline">
+        <label class="cs-label">
+          <b class="cs-text-label">Título da página</b>
+          <input type="text" id="title-page" class="cs-field test-title" value="Clientes" placeholder="Dica: max: 70 caracteres">
+        </label>
+
+        <div class="cs-group-btn cs-label">
+          <label class="cs-text-label" for="cs-page-new-link-show-3"><b>Exibir no menu?</b></label>
+          <input type="checkbox" class="cs-check-toggle" checked="checked" id="cs-page-new-link-show-3">
+          <label for="cs-page-new-show"></label>
+        </div>
+      </div>
+
+      <label class="cs-label">
+        <b class="cs-text-label">Descrição da página para Google <a href="" class="cs-tag">ver exemplo</a></b>
+        <textarea cols="72" rows="8" class="cs-field" placeholder="Esta é a descrição que será exibida no Google e em outros buscadores."></textarea>
+      </label>
+
+      <label class="cs-label-block">
+        <b class="cs-text-label">Endereço da página <a href="#" class="cs-tooltip-top" aria-label="O Google reconhece este endereço, por isso evite alterar com frequência.
+Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
+    <span class="cs-help-info"></span>
+  </a></b>
+        <div class="cs-prefix-group">
+          <span class="cs-prefix">http://meusite.com.br/</span>
+          <input class="cs-field test-url" id="url-page" value="clientes">
+        </div>
+      </label>
+
+      <label class="cs-label-block">
+        <b class="cs-text-label">Inserir abaixo de:</b>
+        <div class="cs-custom-select">
+          <select id="cs-page-new-page-parent">
+            <option>Nenhum</option>
+            <option>Produtos</option>
+            <option>Contato</option>
+          </select>
+        </div>
+      </label>
+
+<!-- 
+      <div class="cs-group-btn cs-label">
+        <label class="cs-text-label" for="show-search-3"><b>Esconder dos buscadores. Google, Bing, Yahoo, etc.</b></label>
+        <input type="checkbox" class="cs-check-toggle" id="show-search-3">
+        <label for="cs-page-new-show"></label>
+      </div> -->
+
+     <!--  <p>
+        <a href="" class="cs-fanpage">Adicionar página do site à FanPage</a>
+        <span class="cs-ico-check"></span>
+        <a href="" class="cs-link">remover</a>
+      </p> -->
+
+      <p>
+        <a href="" class="cs-fanpage">Adicionar página do site à FanPage</a> <a href="#" class="cs-tooltip-top" aria-label="Importante: para utilizar este recurso você já teve ter criado uma fanpage no facebook. Ao ativar está opção, está página do seu site será exibida como uma aba na sua fanpage do facebook, você pode incluir apenas uma página do site por conta.">
+        <span class="cs-help-info"></span></a>
+      </p>
+
+    </div>
+
+    <footer class="cs-sidebar-footer">
+      <label class="cs-btn-primary" id="cancel-add-page" for="cs-sidebar-edit-page-3">Salvar</label>
+      <label class="cs-btn" id="cancel-add-page" for="cs-sidebar-edit-page-3">Cancelar</label>
+      <button class="cs-btn-danger" id="delete-page" data-module="modal" data-target="modal-remove-page">Apagar página</button>
+    </footer>
+
+  </div>
+</div>
+
+  <div id="ember798a" class="ember-view">
+  <input type="checkbox" name="cs-sidebar-new-page"  id="cs-sidebar-edit-page-4" data-ember-action="799">
+  <div class="cs-sidebar-new-page">
+    <span class="cs-sidebar-arrow"></span>
+    <h2 class="cs-sidebar-title">Configurar páginas</h2>
+    <p>Lorem ipsum dolor sit amet</p>
+
+    <div class="cs-fieldset">
+
+      <div class="cs-field-inline">
+        <label class="cs-label">
+          <b class="cs-text-label">Título da página</b>
+          <input type="text" id="title-page" value="Contato" class="cs-field test-title" placeholder="Dica: max: 70 caracteres">
+        </label>
+
+        <div class="cs-group-btn cs-label">
+          <label class="cs-text-label" for="cs-page-new-link-show-3"><b>Exibir no menu?</b></label>
+          <input type="checkbox" class="cs-check-toggle" checked="checked" id="cs-page-new-link-show-3">
+          <label for="cs-page-new-show"></label>
+        </div>
+      </div>
+
+      <label class="cs-label">
+        <b class="cs-text-label">Descrição da página para Google <a href="" class="cs-tag">ver exemplo</a></b>
+        <textarea cols="72" rows="8" class="cs-field" placeholder="Esta é a descrição que será exibida no Google e em outros buscadores."></textarea>
+      </label>
+
+      <label class="cs-label-block">
+        <b class="cs-text-label">Endereço da página <a href="#" class="cs-tooltip-top" aria-label="O Google reconhece este endereço, por isso evite alterar com frequência.
+Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
+    <span class="cs-help-info"></span>
+  </a></b>
+        <div class="cs-prefix-group">
+          <span class="cs-prefix">http://meusite.com.br/</span>
+          <input class="cs-field test-url" id="url-page" value="contato">
+        </div>
+      </label>
+
+      <label class="cs-label-block">
+        <b class="cs-text-label">Inserir abaixo de:</b>
+        <div class="cs-custom-select">
+          <select id="cs-page-new-page-parent">
+            <option>Nenhum</option>
+            <option>Produtos</option>
+            <option>Links úteis</option>
+          </select>
+        </div>
+      </label>
+
+<!-- 
+      <div class="cs-group-btn cs-label">
+        <label class="cs-text-label" for="show-search-3"><b>Esconder dos buscadores. Google, Bing, Yahoo, etc.</b></label>
+        <input type="checkbox" class="cs-check-toggle" id="show-search-3">
+        <label for="cs-page-new-show"></label>
+      </div> -->
+
+     <!--  <p>
+        <a href="" class="cs-fanpage">Adicionar página do site à FanPage</a>
+        <span class="cs-ico-check"></span>
+        <a href="" class="cs-link">remover</a>
+      </p> -->
+
+      <p>
+        <a href="" class="cs-fanpage">Adicionar página do site à FanPage</a> <a href="#" class="cs-tooltip-top" aria-label="Importante: para utilizar este recurso você já teve ter criado uma fanpage no facebook. Ao ativar está opção, está página do seu site será exibida como uma aba na sua fanpage do facebook, você pode incluir apenas uma página do site por conta.">
+        <span class="cs-help-info"></span></a>
+      </p>
+
+    </div>
+
+    <footer class="cs-sidebar-footer">
+      <label class="cs-btn-primary" id="cancel-add-page" for="cs-sidebar-edit-page-4">Salvar</label>
+      <label class="cs-btn" for="cs-sidebar-edit-page-4">Cancelar</label>
+      <button class="cs-btn-danger" id="delete-page" data-module="modal" data-target="modal-remove-page">Apagar página</button>
+    </footer>
+
+  </div>
+</div>
+
+  <div id="ember798a" class="ember-view">
+  <input type="checkbox" name="cs-sidebar-new-page"  id="cs-sidebar-edit-page-5" data-ember-action="799">
+  <div class="cs-sidebar-new-page">
+    <span class="cs-sidebar-arrow"></span>
+    <h2 class="cs-sidebar-title">Configurar páginas</h2>
+    <p>Lorem ipsum dolor sit amet</p>
+
+    <div class="cs-fieldset">
+
+      <div class="cs-field-inline">
+        <label class="cs-label">
+          <b class="cs-text-label">Título da página</b>
+          <input type="text" id="title-page" value="Eventos" class="cs-field test-title" placeholder="Dica: max: 70 caracteres">
+        </label>
+
+        <div class="cs-group-btn cs-label">
+          <label class="cs-text-label" for="cs-page-new-link-show-3"><b>Exibir no menu?</b></label>
+          <input type="checkbox" class="cs-check-toggle" checked="checked" id="cs-page-new-link-show-3">
+          <label for="cs-page-new-show"></label>
+        </div>
+      </div>
+
+      <label class="cs-label">
+        <b class="cs-text-label">Descrição da página para Google <a href="" class="cs-tag">ver exemplo</a></b>
+        <textarea cols="72" rows="8" class="cs-field" placeholder="Esta é a descrição que será exibida no Google e em outros buscadores."></textarea>
+      </label>
+
+      <label class="cs-label-block">
+        <b class="cs-text-label">Endereço da página <a href="#" class="cs-tooltip-top" aria-label="O Google reconhece este endereço, por isso evite alterar com frequência.
+Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
+    <span class="cs-help-info"></span>
+  </a></b>
+        <div class="cs-prefix-group">
+          <span class="cs-prefix">http://meusite.com.br/</span>
+          <input class="cs-field test-url" id="url-page" value="eventos">
+        </div>
+      </label>
+
+      <label class="cs-label-block">
+        <b class="cs-text-label">Inserir abaixo de:</b>
+        <div class="cs-custom-select">
+          <select id="cs-page-new-page-parent">
+            <option>Nenhum</option>
+            <option>Produtos</option>
+            <option>Links úteis</option>
+          </select>
+        </div>
+      </label>
+
+<!-- 
+      <div class="cs-group-btn cs-label">
+        <label class="cs-text-label" for="show-search-3"><b>Esconder dos buscadores. Google, Bing, Yahoo, etc.</b></label>
+        <input type="checkbox" class="cs-check-toggle" id="show-search-3">
+        <label for="cs-page-new-show"></label>
+      </div> -->
+
+     <!--  <p>
+        <a href="" class="cs-fanpage">Adicionar página do site à FanPage</a>
+        <span class="cs-ico-check"></span>
+        <a href="" class="cs-link">remover</a>
+      </p> -->
+
+      <p>
+        <a href="" class="cs-fanpage">Adicionar página do site à FanPage</a> <a href="#" class="cs-tooltip-top" aria-label="Importante: para utilizar este recurso você já teve ter criado uma fanpage no facebook. Ao ativar está opção, está página do seu site será exibida como uma aba na sua fanpage do facebook, você pode incluir apenas uma página do site por conta.">
+        <span class="cs-help-info"></span></a>
+      </p>
+
+    </div>
+
+    <footer class="cs-sidebar-footer">
+      <label class="cs-btn-primary" id="cancel-add-page" for="cs-sidebar-edit-page-5">Salvar</label>
+      <label class="cs-btn" for="cs-sidebar-edit-page-5">Cancelar</label>
+      <button class="cs-btn-danger" id="delete-page" data-module="modal" data-target="modal-remove-page">Apagar página</button>
+    </footer>
+
+  </div>
+</div>
+
 </sidebar>
 
 
@@ -855,7 +1167,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
   </main>
 
 
-<div class="cs-modal-overlay"></div>
+<!-- <div class="cs-modal-overlay"></div> -->
 <div class="cs-modal" id="modal-google">
   <header class="cs-modal-header">
     <h3 class="cs-modal-title">Configurar site</h3>
@@ -897,7 +1209,18 @@ Separamos algumas 3 dicas principais para te ajudar nisto.</p>
   </div>
   <div class="cs-modal-footer">
     <button data-close="modal" class="cs-btn">Cancelar</button>
-    <button data-close="modal" class="cs-btn-primary">Aplicar</button>
+    <button data-close="modal" class="cs-btn-primary">OK</button>
+  </div>
+</div>
+
+
+
+<div class="cs-modal cs-modal-confirm" id="modal-remove-page">
+  <div class="cs-modal-content">
+    <h3 class="title-confirm">Tem certeza que deseja apagar?</h3>
+    <p>Todos os elementos que estão dentro desta seção também serão apagados.</p>
+    <button class="cs-btn-confirm">Apagar</button>
+    <button data-close="modal" class="cs-btn">Cancelar</button>
   </div>
 </div>
 

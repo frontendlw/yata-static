@@ -14,6 +14,9 @@ yata.general = (function() {
     openModal();
     bindCloseModal();
     bindCloseModalEsc();
+    removePage();
+    buttonDelete();
+    bindClear();
   }
 
 
@@ -32,8 +35,13 @@ yata.general = (function() {
     $( '#sortable' ).sortable({
       cancel: '.ui-state-disabled',
       items: 'li:not(.ui-state-disabled)',
-      placeholder: 'ui-state-highlight',
+      placeholder: 'ui-sortable-placeholder',
       handle: '.cs-ico-drag',
+      helper: 'clone',
+      start: function(ev, ui){
+        ui.item.show();
+        ui.placeholder.append('<span />');
+      }
     });
     $( '#sortable li' ).disableSelection();
   }
@@ -48,24 +56,32 @@ yata.general = (function() {
   }
 
   function createTitlePage(){
-    var $field = $('#title-page');
 
-    $field.on('keyup', function(){
-      $('#url-page').val($(this).val());
+
+    $('.test-title').each(function(){
+      $(this).on('keyup', function(){
+
+        var url = $(this).val().replace(/( )/g, '-').toLowerCase();
+
+        $(this).closest('.cs-sidebar-new-page').find('.test-url').val(url);
+      });
+      
     });
 
   }
 
-  function clearFields(){
-    $('#url-page, #title-page').val("");
+  function clearFields(el){
+    $(el).closest('.cs-sidebar-new-page').find('.test-title').val("")
+    $(el).closest('.cs-sidebar-new-page').find('.test-url').val("")
   }
 
   function loadingPage(){
-    $('.image-fake').addClass('hide');
+
+    // $('.cssload-loader').before('<div class="cs-modal-overlay"></div>');
+    // $('.image-fake').addClass('hide');
     $('.cssload-loader').addClass('show');
     setTimeout(function(){
       $('.cssload-loader').removeClass('show');
-      $('.image-empty').addClass('show');
     },3000)
   }
 
@@ -74,30 +90,35 @@ yata.general = (function() {
 
   function confirmNewPage(){
     $('#confirm-add-page').on('click', function(){
+      var el = this;
+      $('.image-fake').addClass('hide');
       $('#add-page').trigger('click');
       loadingPage();
-      clearFields();
+      setTimeout(function(){
+        $('.image-empty').addClass('show');
+        $('#page-event').removeClass('hide');
+        clearFields(el);
+      },3100)
     });
   }
 
   function cancelNewPage(){
     $('#cancel-add-page').on('click', function(){
-      clearFields();
+      // clearFields();
     });
   }
 
   function openEditPage(){
     $('.cs-ico-config').on('click', function(e){
-      $('#cs-sidebar-edit-page').click();
-      if($('#cs-sidebar-edit-page').is(':checked')){
+      createTitlePage();
+      $('input[name="cs-sidebar-new-page"]').removeAttr('checked');
+      var target = $(this).data('target');
+      $(target).click();
+      if($(target).is(':checked')){
         positionArrow(this);
-      }
-      if($('#cs-sidebar-new-page, #cs-sidebar-new-link').is(':checked')){
-        $('#cs-sidebar-new-page, #cs-sidebar-new-link').removeAttr('checked');
       }
     });
   }
-
 
   function positionArrow(elem){
     var posY = $(elem).offset().top - 50;
@@ -115,9 +136,13 @@ yata.general = (function() {
 
   function openModal(){
     $('[data-module="modal"]').on('click', function(){
+      $('input[name="cs-sidebar-new-page"]').removeAttr('checked');
+      $('.cs-modal-overlay').remove();
       var target = $(this).attr('data-target');
       $('html').addClass('cs-open-modal');
+      $('#' + target).before('<div class="cs-modal-overlay"></div>');
       $('#' + target).addClass('opened');
+
     });
   }
 
@@ -129,7 +154,9 @@ yata.general = (function() {
 
   function closeModal(el){
     $('html').removeClass('cs-open-modal');
-    $(el).closest('.cs-modal').removeClass('opened');
+    $(el).closest('.cs-modal').removeClass('opened').removeAttr('data-id');
+    $('.cs-modal-overlay').remove();
+
   }
 
 
@@ -140,6 +167,35 @@ yata.general = (function() {
       }
     });
 
+  }
+
+  function bindClear(){
+    $('[data-event="clear"]').on('click', function(){
+      clearFields(this);
+    });
+  }
+
+  function removePage(){
+    $('.cs-btn-confirm').on('click', function(){
+
+      var id = $('#modal-remove-page').attr('data-id');
+      console.log(id);
+      $('.cs-page').find('img').hide();
+      closeModal(this);
+      loadingPage();
+
+      setTimeout(function(){
+        $('[data-target="' + id + '"]').closest('li').hide();
+      },3100);
+      
+    });
+  }
+
+  function buttonDelete(){
+    $('.cs-btn-danger').on('click', function(){
+      var id = $(this).closest('.cs-sidebar-new-page').prev().attr('id')
+      $('#modal-remove-page').attr('data-id', '#' + id);
+    });
   }
 
   return {

@@ -131,8 +131,7 @@
   opacity: 0.15; }
 
 /* line 56, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/helpers/_placeholder.sass */
-[class*="cs-btn"], input.cs-check-toggle + label:before, input.cs-check-toggle + label:after, .ui-sortable-helper,
-.ui-sortable-helper:hover, [class*="cs-custom-select"], .cs-alerts-list :before, .cs-sidebar .cs-tab-label, .cs-sidebar .cs-tab-label:before, .cs-pages-list.ui-sortable li {
+[class*="cs-btn"], input.cs-check-toggle + label:before, input.cs-check-toggle + label:after, [class*="cs-custom-select"], .cs-alerts-list :before, .cs-sidebar .cs-tab-label, .cs-sidebar .cs-tab-label:before, .cs-pages-list.ui-sortable li {
   -webkit-transition: background 0.25s ease-in, color 0.25s ease-in;
   -moz-transition: background 0.25s ease-in, color 0.25s ease-in;
   transition: background 0.25s ease-in, color 0.25s ease-in; }
@@ -514,41 +513,23 @@ body {
   min-height: inherit; }
 
 /* line 102, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
-.ui-state-highlight {
-  border: 2px dashed #F0F7F9 !important;
-  min-height: 55px; }
-
-/* line 106, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
-.ui-sortable {
-  border: none !important; }
-
-/* line 109, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
-.ui-sortable-helper,
-.ui-sortable-helper:hover {
-  background: #0096c4 !important; }
-  /* line 114, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
-  .ui-sortable-helper a,
-  .ui-sortable-helper:hover a {
-    color: rgba(204, 204, 204, 0.5) !important; }
-
-/* line 117, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
 .image-fake {
   z-index: 1;
   opacity: 1;
   position: relative; }
-  /* line 122, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+  /* line 107, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
   .image-fake.hide {
     display: none; }
 
-/* line 125, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+/* line 110, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
 .image-fake,
 .image-empty {
   text-align: center; }
 
-/* line 130, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+/* line 115, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
 .image-empty {
   display: none; }
-  /* line 133, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
+  /* line 118, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_base.sass */
   .image-empty.show {
     display: block; }
 
@@ -564,6 +545,109 @@ body {
 #tab-seo {
   height: 200px;
   overflow-y: auto; }
+
+/* line 15, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_test.sass */
+.title-confirm {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px; }
+
+/* line 23, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_test.sass */
+.cs-modal.cs-modal-confirm {
+  color: #666;
+  max-width: 380px;
+  text-align: center;
+  padding-bottom: 0;
+  padding: 0;
+  width: 380px;
+  font-size: 13px; }
+  /* line 32, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_test.sass */
+  .cs-modal.cs-modal-confirm p {
+    margin-bottom: 15px; }
+
+/* line 36, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_test.sass */
+.hide {
+  display: none; }
+
+/* line 1, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_sortable.sass */
+.ui-draggable {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab; }
+
+/* line 6, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_sortable.sass */
+.ui-sortable {
+  border: none !important;
+  padding: 3px; }
+
+/* line 10, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_sortable.sass */
+.ui-sortable-handle {
+  cursor: move; }
+
+/* line 13, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_sortable.sass */
+.ui-sortable-placeholder {
+  position: relative;
+  margin: 0 15px 0;
+  padding: 0;
+  min-width: 0;
+  height: auto !important;
+  border: none;
+  border-radius: 0;
+  visibility: visible !important;
+  background: transparent;
+  z-index: 2;
+  -webkit-animation: fadeIn 0.4s;
+  -moz-animation: fadeIn 0.4s;
+  animation: fadeIn 0.4s; }
+  /* line 27, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_sortable.sass */
+  .ui-sortable-placeholder:after, .ui-sortable-placeholder:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -13px;
+    width: 26px;
+    height: 50%;
+    background: #d1f1fb url(/assets/images/temp-icon-placeholder-vertical.png) no-repeat center 15px; }
+  /* line 37, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_sortable.sass */
+  .ui-sortable-placeholder:after {
+    top: auto;
+    bottom: 0;
+    background-position: center calc(100% - 15px); }
+  /* line 42, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_sortable.sass */
+  .ui-sortable-placeholder span {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 1px;
+    min-height: 0;
+    border-top: 1px dotted rgba(1, 177, 231, 0.5);
+    z-index: 1; }
+  /* line 53, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_sortable.sass */
+  .cs-widgets > .ui-sortable-placeholder, .cs-lines > .ui-sortable-placeholder, .cs-sections > .ui-sortable-placeholder, .cs-list-pages > .ui-sortable-placeholder {
+    height: 0;
+    min-height: 0;
+    min-width: 100%;
+    margin: 15px 0; }
+    /* line 62, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_sortable.sass */
+    .cs-widgets > .ui-sortable-placeholder:after, .cs-widgets > .ui-sortable-placeholder:before, .cs-lines > .ui-sortable-placeholder:after, .cs-lines > .ui-sortable-placeholder:before, .cs-sections > .ui-sortable-placeholder:after, .cs-sections > .ui-sortable-placeholder:before, .cs-list-pages > .ui-sortable-placeholder:after, .cs-list-pages > .ui-sortable-placeholder:before {
+      width: 50%;
+      height: 26px;
+      left: 0;
+      top: -13px;
+      background: #000000 url(/assets/images/temp-icon-placeholder.png) no-repeat 15px center;
+      font-family: "yata";
+      color: rgba(1, 177, 231, 0.5);
+      content: "";
+      padding-left: 14px;
+      padding-top: 6px; }
+    /* line 75, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/_sortable.sass */
+    .cs-widgets > .ui-sortable-placeholder:after, .cs-lines > .ui-sortable-placeholder:after, .cs-sections > .ui-sortable-placeholder:after, .cs-list-pages > .ui-sortable-placeholder:after {
+      left: 50%;
+      background-position: calc(100% - 15px) center;
+      text-align: right;
+      padding-right: 14px; }
 
 /* line 5, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_buttons.sass */
 [class*="cs-btn"][class*="cs-ico-"]:before {
@@ -809,22 +893,6 @@ body {
     .cs-alerts-list [class*="cs-ico"] span {
       display: none; }
 
-/* line 1, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sortable.sass */
-.dropzone-slot {
-  background-color: yellow;
-  padding: 2px; }
-
-/* line 5, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sortable.sass */
-.ui-draggable {
-  cursor: grab;
-  cursor: -moz-grab;
-  cursor: -webkit-grab; }
-
-/* line 10, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sortable.sass */
-.ui-sortable {
-  border: solid 1px;
-  padding: 3px; }
-
 /* line 1, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_header.sass */
 .cs-topbar {
   background: #f5f5f5;
@@ -901,7 +969,7 @@ body {
   width: 300px;
   background: #001a22;
   box-shadow: 1px 0 3px rgba(0, 0, 0, 0.6);
-  z-index: 2; }
+  z-index: 12; }
   /* line 17, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_sidebar.sass */
   .cs-sidebar .cs-title {
     font-size: 18px;
@@ -1562,20 +1630,28 @@ input.cs-check-toggle {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+  /* line 18, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  .cs-modal.cs-modal-confirm {
+    color: #666;
+    max-width: 380px;
+    text-align: center;
+    padding-bottom: 0;
+    padding: 0;
+    width: 380px; }
 
-/* line 17, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 26, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 .cs-modal-header, .cs-modal-footer,
 .cs-modal-content,
 .cs-modal-footer {
   padding: 30px; }
 
-/* line 22, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 31, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 .cs-modal-header, .cs-modal-footer {
   background: #f5f5f5;
   border-radius: 5px 5px 0 0;
   border-bottom: 1px solid #ccc;
   position: relative; }
-  /* line 28, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 37, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-modal-header .cs-ico-close, .cs-modal-footer .cs-ico-close {
     color: #b7b7b7;
     text-decoration: none;
@@ -1584,20 +1660,20 @@ input.cs-check-toggle {
     right: 30px;
     top: 50%;
     margin-top: -6px; }
-    /* line 37, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+    /* line 46, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
     .cs-modal-header .cs-ico-close:hover, .cs-modal-footer .cs-ico-close:hover, .cs-modal-header .cs-ico-close:focus, .cs-modal-footer .cs-ico-close:focus {
       color: #848484; }
 
-/* line 41, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 50, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 .cs-modal-title {
   color: #01b1e7;
   font-size: 22px;
   font-weight: 300; }
-  /* line 47, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 56, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-modal-title p {
     color: #666; }
 
-/* line 50, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 59, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 .cs-modal-footer {
   border-radius: 0 0 5px 5px;
   border-top: 1px solid #ccc;
@@ -1607,13 +1683,13 @@ input.cs-check-toggle {
   bottom: 0;
   text-align: right; }
 
-/* line 60, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 69, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 .cs-modal-content {
   padding: 10px 30px;
   display: table;
   width: 100%; }
 
-/* line 65, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 74, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 .cs-modal-overlay {
   position: fixed;
   top: 0;
@@ -1623,71 +1699,71 @@ input.cs-check-toggle {
   z-index: -1;
   background: rgba(0, 0, 0, 0.8); }
 
-/* line 85, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 94, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 input[id="cs-image-tab-send"]:checked + label {
   border-bottom: 4px solid #01b1e7;
   position: relative;
   padding-bottom: 7px;
   font-weight: 700;
   z-index: 2; }
-/* line 94, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 103, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 input[id="cs-image-tab-send"]:checked ~ .cs-image-tabs .cs-image-tab-send {
   position: relative;
   visibility: visible;
   opacity: 1; }
 
-/* line 85, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 94, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 input[id="cs-image-tab-my"]:checked + label {
   border-bottom: 4px solid #01b1e7;
   position: relative;
   padding-bottom: 7px;
   font-weight: 700;
   z-index: 2; }
-/* line 94, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 103, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 input[id="cs-image-tab-my"]:checked ~ .cs-image-tabs .cs-image-tab-my {
   position: relative;
   visibility: visible;
   opacity: 1; }
 
-/* line 85, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 94, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 input[id="cs-image-tab-free"]:checked + label {
   border-bottom: 4px solid #01b1e7;
   position: relative;
   padding-bottom: 7px;
   font-weight: 700;
   z-index: 2; }
-/* line 94, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 103, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 input[id="cs-image-tab-free"]:checked ~ .cs-image-tabs .cs-image-tab-free {
   position: relative;
   visibility: visible;
   opacity: 1; }
 
-/* line 85, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 94, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 input[id="cs-image-tab-instagram"]:checked + label {
   border-bottom: 4px solid #01b1e7;
   position: relative;
   padding-bottom: 7px;
   font-weight: 700;
   z-index: 2; }
-/* line 94, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 103, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 input[id="cs-image-tab-instagram"]:checked ~ .cs-image-tabs .cs-image-tab-instagram {
   position: relative;
   visibility: visible;
   opacity: 1; }
 
-/* line 99, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 108, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 .cs-modal-tab {
   display: table;
   width: 100%;
   padding-bottom: 25px; }
-  /* line 104, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 113, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-modal-tab > label {
     margin-right: 60px; }
-    /* line 107, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+    /* line 116, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
     .cs-modal-tab > label:last-child {
       margin-right: 0; }
 
-/* line 110, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 119, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 .cs-image-tabs {
   margin: 10px -30px 0;
   padding: 0 30px 20px;
@@ -1695,7 +1771,7 @@ input[id="cs-image-tab-instagram"]:checked ~ .cs-image-tabs .cs-image-tab-instag
   position: relative;
   z-index: 1; }
 
-/* line 117, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 126, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 .cs-image-tab {
   position: absolute;
   top: 0;
@@ -1703,33 +1779,33 @@ input[id="cs-image-tab-instagram"]:checked ~ .cs-image-tabs .cs-image-tab-instag
   opacity: 0;
   visibility: hidden; }
 
-/* line 124, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 133, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 .cs-preview-image {
   float: left;
   text-align: center;
   padding-top: 40px;
   width: 360px; }
-  /* line 130, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 139, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-preview-image .cs-preview-image-wrap {
     display: inline-block;
     padding: 15px 15px 0;
     position: relative; }
-    /* line 135, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+    /* line 144, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
     .cs-preview-image .cs-preview-image-wrap [class*="cs-preview-arrow"] {
       position: absolute;
       color: rgba(102, 102, 102, 0.5); }
-      /* line 139, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+      /* line 148, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
       .cs-preview-image .cs-preview-image-wrap [class*="cs-preview-arrow"]:before {
         position: absolute;
         font-family: "yata";
         content: "";
         font-size: 20px;
         color: #01b1e7; }
-    /* line 146, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+    /* line 155, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
     .cs-preview-image .cs-preview-image-wrap .cs-preview-arrow-x {
       top: -25px;
       width: calc(100% - 30px); }
-      /* line 150, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+      /* line 159, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
       .cs-preview-image .cs-preview-image-wrap .cs-preview-arrow-x:before {
         -webkit-transform: translateX(-50%);
         -moz-transform: translateX(-50%);
@@ -1738,7 +1814,7 @@ input[id="cs-image-tab-instagram"]:checked ~ .cs-image-tabs .cs-image-tab-instag
         transform: translateX(-50%);
         top: 15px;
         left: 50%; }
-    /* line 155, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+    /* line 164, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
     .cs-preview-image .cs-preview-image-wrap .cs-preview-arrow-y {
       -webkit-transform: rotate(90deg) translateY(-50%);
       -moz-transform: rotate(90deg) translateY(-50%);
@@ -1747,33 +1823,33 @@ input[id="cs-image-tab-instagram"]:checked ~ .cs-image-tabs .cs-image-tab-instag
       transform: rotate(90deg) translateY(-50%);
       right: -50px;
       top: 50%; }
-      /* line 160, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+      /* line 169, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
       .cs-preview-image .cs-preview-image-wrap .cs-preview-arrow-y:before {
         right: 50%;
         top: 17px; }
-    /* line 164, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+    /* line 173, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
     .cs-preview-image .cs-preview-image-wrap:before, .cs-preview-image .cs-preview-image-wrap:after {
       content: "";
       position: absolute;
       border-color: #01b1e7;
       border-width: 1px; }
-    /* line 171, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+    /* line 180, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
     .cs-preview-image .cs-preview-image-wrap:before {
       border-top-style: solid;
       width: calc(100% - 30px);
       top: 0;
       left: 15px; }
-    /* line 177, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+    /* line 186, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
     .cs-preview-image .cs-preview-image-wrap:after {
       border-right-style: solid;
       height: calc(100% - 18px);
       right: 0;
       top: 15px; }
-  /* line 183, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 192, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-preview-image img {
     max-width: 100%;
     max-height: 260px; }
-  /* line 187, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 196, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-preview-image [class*="cs-btn"] {
     -webkit-transform: translate(-50%);
     -moz-transform: translate(-50%);
@@ -1786,29 +1862,29 @@ input[id="cs-image-tab-instagram"]:checked ~ .cs-image-tabs .cs-image-tab-instag
     left: 50%;
     width: 150px; }
 
-/* line 195, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 204, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 .cs-config-image {
   float: right;
   padding-top: 30px;
   width: 465px; }
-  /* line 202, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 211, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-config-image .cs-field-inline .cs-label:first-child {
     width: 63%; }
-  /* line 205, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 214, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-config-image .cs-field-inline .cs-group-btn {
     float: right; }
-  /* line 209, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 218, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-config-image .cs-field-inline .cs-check-toggle + label:before, .cs-config-image .cs-field-inline .cs-check-toggle + label:after {
     width: 75px; }
 
-/* line 214, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 223, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 .cs-image-drop {
   position: relative;
   display: block;
   margin: 0 auto;
   max-width: 600px;
   height: 200px; }
-  /* line 221, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 230, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-image-drop .cs-image-area,
   .cs-image-drop .cs-image-area:after {
     position: absolute;
@@ -1819,13 +1895,13 @@ input[id="cs-image-tab-instagram"]:checked ~ .cs-image-tabs .cs-image-tab-instag
     opacity: 1;
     z-index: 1;
     background: url(/assets/images/temp-bg-upload.png) no-repeat center center; }
-  /* line 232, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 241, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-image-drop .cs-image-area:after {
     content: "";
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.8);
     background-image: url(/assets/images/loading.gif); }
-  /* line 238, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 247, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-image-drop input {
     position: absolute;
     top: 0;
@@ -1835,27 +1911,27 @@ input[id="cs-image-tab-instagram"]:checked ~ .cs-image-tabs .cs-image-tab-instag
     z-index: 2;
     opacity: 0;
     cursor: pointer; }
-  /* line 250, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 259, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-image-drop input:hover + .cs-image-area,
   .cs-image-drop input.is-hover + .cs-image-area {
     background-size: 50%; }
-  /* line 254, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 263, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-image-drop input.is-loading + .cs-image-area {
     background-size: auto; }
-    /* line 256, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+    /* line 265, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
     .cs-image-drop input.is-loading + .cs-image-area:after {
       opacity: 1; }
 
-/* line 262, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 271, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 .cs-image-list {
   max-height: 300px;
   overflow: auto; }
-  /* line 266, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 275, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-image-list li {
     position: relative;
     width: 16.66%;
     padding: 7px 6px; }
-  /* line 271, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 280, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-image-list img {
     position: absolute;
     left: 50%;
@@ -1866,7 +1942,7 @@ input[id="cs-image-tab-instagram"]:checked ~ .cs-image-tabs .cs-image-tab-instag
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
-  /* line 278, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 287, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-image-list .cs-image-delete {
     position: absolute;
     top: 10px;
@@ -1876,17 +1952,17 @@ input[id="cs-image-tab-instagram"]:checked ~ .cs-image-tabs .cs-image-tab-instag
     z-index: 3;
     opacity: 0;
     visibility: hidden; }
-  /* line 288, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 297, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-image-list li:hover .cs-image-delete {
     visibility: visible;
     opacity: 1; }
-  /* line 292, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 301, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-image-list .cs-image-item {
     position: relative;
     display: block;
     padding-top: 59%;
     overflow: hidden; }
-    /* line 298, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+    /* line 307, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
     .cs-image-list .cs-image-item:after {
       content: "";
       display: block;
@@ -1898,29 +1974,29 @@ input[id="cs-image-tab-instagram"]:checked ~ .cs-image-tabs .cs-image-tab-instag
       background: transparent;
       border: 2px solid rgba(0, 0, 0, 0.5);
       z-index: 2; }
-  /* line 317, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+  /* line 326, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
   .cs-image-list input[type="radio"]:checked + label:after {
     border-color: #01b1e7;
     background: rgba(0, 0, 0, 0.8) url(/assets/images/temp-icon-selected.png) no-repeat center center; }
 
-/* line 322, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 331, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 .cs-link-instagram {
   margin: 0 auto;
   width: 184px;
   height: 52px;
   background: url(/assets/images/logo-instagram.png) no-repeat; }
 
-/* line 331, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 340, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 .cs-open-modal .cs-modal-overlay {
-  z-index: 10; }
+  z-index: 98; }
 
-/* line 334, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
+/* line 343, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/_modal.sass */
 .cs-modal.opened {
   -webkit-animation: fadeIn 0.8s;
   -moz-animation: fadeIn 0.8s;
   animation: fadeIn 0.8s;
   opacity: 1;
-  z-index: 11; }
+  z-index: 99; }
 
 /* line 1, /Users/deividgonalves/Locaweb/yata-static/source/assets/stylesheets/modules/sidebar/_include-elements.sass */
 .cs-widgets-group {
