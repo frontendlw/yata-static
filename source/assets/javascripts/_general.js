@@ -88,12 +88,11 @@ yata.general = (function() {
 
   function openEditPage(){
     $('.cs-ico-config').on('click', function(e){
-      $('#cs-sidebar-edit-page').click();
-      if($('#cs-sidebar-edit-page').is(':checked')){
+      $('input[name="cs-sidebar-new-page"]').removeAttr('checked');
+      var target = $(this).data('target');
+      $(target).click();
+      if($(target).is(':checked')){
         positionArrow(this);
-      }
-      if($('#cs-sidebar-new-page, #cs-sidebar-new-link').is(':checked')){
-        $('#cs-sidebar-new-page, #cs-sidebar-new-link').removeAttr('checked');
       }
     });
   }
