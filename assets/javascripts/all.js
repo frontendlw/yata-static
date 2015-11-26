@@ -22,6 +22,7 @@ yata.general = (function() {
 
   function toggleLabelPopover(){
     $('#ember590 label').on('click', function(){
+      $('input[name="cs-sidebar-new-page"]').removeAttr('checked');
       var target = $(this).attr('for');
       if( target == 'cs-sidebar-new-page'){
         $('#cs-sidebar-new-link').removeAttr('checked');
