@@ -50,9 +50,13 @@ yata.general = (function() {
 
   function createTitlePage(){
 
+
     $('.test-title').each(function(){
       $(this).on('keyup', function(){
-        $(this).closest('.cs-sidebar-new-page').find('.test-url').val($(this).val());
+
+        var url = $(this).val().replace(/( )/g, '-').toLowerCase();
+
+        $(this).closest('.cs-sidebar-new-page').find('.test-url').val(url);
       });
       
     });
