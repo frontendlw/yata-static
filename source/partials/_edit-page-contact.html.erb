@@ -10,7 +10,7 @@
       <div class="cs-field-inline">
         <label class="cs-label">
           <b class="cs-text-label">Título da página</b>
-          <input type="text" id="title-page" value="Contato" class="cs-field" placeholder="Dica: max: 70 caracteres">
+          <input type="text" id="title-page" value="Contato" class="cs-field test-title" placeholder="Dica: max: 70 caracteres">
         </label>
 
         <div class="cs-group-btn cs-label">
@@ -32,7 +32,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
   </a></b>
         <div class="cs-prefix-group">
           <span class="cs-prefix">http://meusite.com.br/</span>
-          <input class="cs-field" id="url-page" value="contato">
+          <input class="cs-field test-url" id="url-page" value="contato">
         </div>
       </label>
 
@@ -69,8 +69,8 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
 
     <footer class="cs-sidebar-footer">
       <label class="cs-btn-primary" id="cancel-add-page" for="cs-sidebar-edit-contact">Salvar</label>
-      <label class="cs-btn" id="cancel-add-page" for="cs-sidebar-edit-contact">Cancelar</label>
-      <button class="cs-btn-danger" id="delete-page">Apagar página</button>
+      <label class="cs-btn" for="cs-sidebar-edit-contact">Cancelar</label>
+      <button class="cs-btn-danger" id="delete-page" data-module="modal" data-target="modal-remove-page">Apagar página</button>
     </footer>
 
   </div>
