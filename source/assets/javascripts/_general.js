@@ -91,9 +91,10 @@ yata.general = (function() {
 
   function confirmNewPage(){
     $('#confirm-add-page').on('click', function(){
+      $('input[name="cs-sidebar-new-page"]').removeAttr('checked');
       var el = this;
       $('.image-fake').addClass('hide');
-      $('#add-page').trigger('click');
+      // $('#add-page').trigger('click');
       loadingPage();
       setTimeout(function(){
         $('.image-empty').addClass('show');
