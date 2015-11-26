@@ -49,10 +49,12 @@ yata.general = (function() {
   }
 
   function createTitlePage(){
-    var $field = $('.test-title');
 
-    $field.on('keyup', function(){
-      $('.test-url').val($(this).val());
+    $('.test-title').each(function(){
+      $(this).on('keyup', function(){
+        $(this).closest('.cs-sidebar-new-page').find('.test-url').val($(this).val());
+      });
+      
     });
 
   }
