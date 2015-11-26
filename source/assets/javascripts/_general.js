@@ -15,6 +15,8 @@ yata.general = (function() {
     bindCloseModal();
     bindCloseModalEsc();
     removePage();
+    buttonDelete();
+    bindClear();
   }
 
 
@@ -68,8 +70,9 @@ yata.general = (function() {
 
   }
 
-  function clearFields(){
-    $('#url-page, #title-page').val("");
+  function clearFields(el){
+    $(el).closest('.cs-sidebar-new-page').find('.test-title').val("")
+    $(el).closest('.cs-sidebar-new-page').find('.test-url').val("")
   }
 
   function loadingPage(){
@@ -87,12 +90,14 @@ yata.general = (function() {
 
   function confirmNewPage(){
     $('#confirm-add-page').on('click', function(){
+      var el = this;
       $('.image-fake').addClass('hide');
       $('#add-page').trigger('click');
       loadingPage();
-      clearFields();
       setTimeout(function(){
         $('.image-empty').addClass('show');
+        $('#page-event').removeClass('hide');
+        clearFields(el);
       },3100)
     });
   }
@@ -137,6 +142,7 @@ yata.general = (function() {
       $('html').addClass('cs-open-modal');
       $('#' + target).before('<div class="cs-modal-overlay"></div>');
       $('#' + target).addClass('opened');
+
     });
   }
 
@@ -148,8 +154,9 @@ yata.general = (function() {
 
   function closeModal(el){
     $('html').removeClass('cs-open-modal');
-    $(el).closest('.cs-modal').removeClass('opened');
+    $(el).closest('.cs-modal').removeClass('opened').removeAttr('data-id');
     $('.cs-modal-overlay').remove();
+
   }
 
 
@@ -162,11 +169,32 @@ yata.general = (function() {
 
   }
 
+  function bindClear(){
+    $('[data-event="clear"]').on('click', function(){
+      clearFields(this);
+    });
+  }
+
   function removePage(){
     $('.cs-btn-confirm').on('click', function(){
+
+      var id = $('#modal-remove-page').attr('data-id');
+      console.log(id);
       $('.cs-page').find('img').hide();
       closeModal(this);
       loadingPage();
+
+      setTimeout(function(){
+        $('[data-target="' + id + '"]').closest('li').hide();
+      },3100);
+      
+    });
+  }
+
+  function buttonDelete(){
+    $('.cs-btn-danger').on('click', function(){
+      var id = $(this).closest('.cs-sidebar-new-page').prev().attr('id')
+      $('#modal-remove-page').attr('data-id', '#' + id);
     });
   }
 
