@@ -33,8 +33,13 @@ yata.general = (function() {
     $( '#sortable' ).sortable({
       cancel: '.ui-state-disabled',
       items: 'li:not(.ui-state-disabled)',
-      placeholder: 'ui-state-highlight',
+      placeholder: 'ui-sortable-placeholder',
       handle: '.cs-ico-drag',
+      helper: 'clone',
+      start: function(ev, ui){
+        ui.item.show();
+        ui.placeholder.append('<span />');
+      }
     });
     $( '#sortable li' ).disableSelection();
   }
