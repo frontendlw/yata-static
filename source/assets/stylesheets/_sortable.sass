@@ -1,0 +1,83 @@
+.ui-draggable
+  cursor: grab
+  cursor: -moz-grab
+  cursor: -webkit-grab
+
+.ui-sortable
+  border: none!important
+  padding: 3px
+
+.ui-sortable-handle
+  cursor: move
+
+.ui-sortable-placeholder
+  position: relative
+  margin: 0 15px 0
+  padding: 0
+  min-width: 0
+  height: auto!important
+  border: none
+  border-radius: 0
+  visibility: visible!important
+  background: transparent
+  z-index: 2
+  // @include flex(1)
+  @include animation(fadeIn 0.4s)
+
+  &:after,
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: -13px
+    width: 26px
+    height: 50%
+    background: $colorBase3 url(/assets/images/temp-icon-placeholder-vertical.png) no-repeat center 15px
+
+  &:after
+    top: auto
+    bottom: 0
+    background-position: center calc(100% - 15px)
+
+  span
+    position: absolute
+    top: -1px
+    left: 0
+    bottom: 0
+    right: 0
+    min-width: 1px
+    min-height: 0
+    border-top: 1px dotted rgba($colorBase1, .5)
+    z-index: 1
+
+  .cs-widgets > &,
+  .cs-lines > &,
+  .cs-sections > &,
+  .cs-list-pages > &
+    height: 0
+    min-height: 0
+    min-width: 100%
+    margin: 15px 0
+
+    &:after,
+    &:before
+      width: 50%
+      height: 26px
+      left: 0
+      top: -13px
+      background: $colorBlack url(/assets/images/temp-icon-placeholder.png) no-repeat 15px center
+      font-family: 'yata'
+      color: rgba($colorBase1, .5)
+      content: "\e91b"
+      padding-left: 14px
+      padding-top: 6px
+
+    &:after
+      left: 50%
+      background-position: calc(100% - 15px) center
+      text-align: right
+      padding-right: 14px
+
+.ui-sortable-helper
+  @include transform(scale(0.6))
+  opacity: 0.6
