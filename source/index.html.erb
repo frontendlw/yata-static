@@ -9,11 +9,24 @@ title: Home
     <%= partial 'partials/sidebar' %>
 
     <div class="cs-page">
-      <div class="image-fake">
-        <img src="<%= base_url %>/assets/images/content.jpg" alt="Conteúdo fake">
+
+      <div id="page-home" class="image-fake">
+        <img src="<%= base_url %>/assets/images/home.jpg" alt="Conteúdo fake">
       </div>
-      <div class="image-empty">
-        <img src="<%= base_url %>/assets/images/content-empty.jpg" alt="Conteúdo fake">
+      <div id="page-sobre" class="hide">
+        <img src="<%= base_url %>/assets/images/sobre.jpg" alt="Conteúdo fake">
+      </div>
+      <div id="page-clientes" class="hide">
+        <img src="<%= base_url %>/assets/images/clientes.jpg" alt="Conteúdo fake">
+      </div>
+      <div id="page-contato" class="hide">
+        <img src="<%= base_url %>/assets/images/contato.jpg" alt="Conteúdo fake">
+      </div>
+      <div id="page-eventos" class="hide image-empty">
+        <img src="<%= base_url %>/assets/images/eventos.jpg" alt="Conteúdo fake">
+      </div>
+      <div id="page-fale-conosco" class="hide ">
+        <img src="<%= base_url %>/assets/images/fale_conosco.jpg" alt="Conteúdo fake">
       </div>
       <div class="cssload-loader"></div>
     </div>
