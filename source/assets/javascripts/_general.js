@@ -191,6 +191,7 @@ yata.general = (function() {
 
       setTimeout(function(){
         $('[data-target="' + id + '"]').closest('li').hide();
+        $('.image-fake').removeClass('hide').find('img').show();
       },3100);
 
     });
