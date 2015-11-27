@@ -8,6 +8,7 @@
     z-index: 12
     opacity: 0
     @include transform(scale(.1))
+    @include transform-origin(0)
 
   &:after
     content: attr(aria-label)
@@ -35,10 +36,17 @@
   &:focus:after,
   &:hover:before,
   &:focus:before
-    @include transition(opacity, .25s, ease-in-out, transform, .15s, ease-in-out)
     opacity: 1
     @include transform(scale(1))
     @include transform-origin(0)
+
+  &.cs-tooltip-animated
+    &:hover:after,
+    &:focus:after,
+    &:hover:before,
+    &:focus:before
+      @include transition(opacity, .25s, ease-in-out, transform, .15s, ease-in-out)
+
 
 /* Top */
 
@@ -57,7 +65,7 @@
   &:hover:before,
   &:focus:before,
   &:focus:before
-    bottom: 90%
+    bottom: 70%
     left: 0
     @include transform(scale(1))
 
@@ -79,7 +87,7 @@
   &:focus:after,
   &:hover:before,
   &:focus:before
-    top: 90%
+    top: 70%
     left: 0
 
   &:hover:before,
@@ -102,7 +110,7 @@
   &:hover:before,
   &:focus:before
     left: 75%
-    top: 0
+    top: -4px
 
   &:hover:before,
   &:focus:before
@@ -123,7 +131,7 @@
   &:hover:before,
   &:focus:before
     right: 75%
-    top: 0
+    top: -4px
 
   &:hover:before,
   &:focus:before
