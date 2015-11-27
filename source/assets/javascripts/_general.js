@@ -17,6 +17,7 @@ yata.general = (function() {
     removePage();
     buttonDelete();
     bindClear();
+    menu();
   }
 
 
@@ -93,7 +94,7 @@ yata.general = (function() {
     $('#confirm-add-page').on('click', function(){
       $('input[name="cs-sidebar-new-page"]').removeAttr('checked');
       var el = this;
-      $('.image-fake').addClass('hide');
+      $('.test-page').addClass('hide');
       // $('#add-page').trigger('click');
       loadingPage();
       setTimeout(function(){
@@ -111,6 +112,23 @@ yata.general = (function() {
 
       var text = $('.cs-list-pages [data-target="#' + id + ']').parents('li');
       $('[data-target="#' + id + '"]').closest('li').find('.cs-pages-link .menu').text(menu)
+
+      $('.test-page').addClass('hide');
+      loadingPage();
+
+
+      if( id == 'cs-sidebar-edit-page-4'){
+        setTimeout(function(){
+          $('#page-fale-conosco').removeClass('hide');
+        },3100)
+      }else{
+        setTimeout(function(){
+          $('[data-target="#' + id + '"]').closest('li').find('.cs-pages-link').click();
+        },3100)
+
+      }
+
+
     });
   }
 
@@ -201,6 +219,16 @@ yata.general = (function() {
     $('.cs-btn-danger').on('click', function(){
       var id = $(this).closest('.cs-sidebar-new-page').prev().attr('id')
       $('#modal-remove-page').attr('data-id', '#' + id);
+    });
+  }
+
+
+  function menu(){
+    $('.cs-pages-link').on('click', function(e){
+      e.preventDefault();
+      var ref = $(this).attr('href');
+      $('.test-page').addClass('hide');
+      $(ref).removeClass('hide')
     });
   }
 
