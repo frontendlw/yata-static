@@ -8,7 +8,7 @@ yata.general = (function() {
     linkPreventDefault();
     createTitlePage();
     confirmNewPage();
-    cancelNewPage();
+    confirmEditPage();
     openEditPage();
     showBoxPages();
     openModal();
@@ -66,7 +66,7 @@ yata.general = (function() {
 
         $(this).closest('.cs-sidebar-new-page').find('.test-url').val(url);
       });
-      
+
     });
 
   }
@@ -104,9 +104,13 @@ yata.general = (function() {
     });
   }
 
-  function cancelNewPage(){
-    $('#cancel-add-page').on('click', function(){
-      // clearFields();
+  function confirmEditPage(){
+    $('.confirm-edit-page').on('click', function(){
+      var menu = $(this).closest('.cs-sidebar-new-page').find('.test-title').val();
+      var id = $(this).closest('.cs-sidebar-new-page').prev().attr('id')
+
+      var text = $('.cs-list-pages [data-target="#' + id + ']').parents('li');
+      $('[data-target="#' + id + '"]').closest('li').find('.cs-pages-link .menu').text(menu)
     });
   }
 
@@ -181,7 +185,6 @@ yata.general = (function() {
     $('.cs-btn-confirm').on('click', function(){
 
       var id = $('#modal-remove-page').attr('data-id');
-      console.log(id);
       $('.cs-page').find('img').hide();
       closeModal(this);
       loadingPage();
@@ -189,7 +192,7 @@ yata.general = (function() {
       setTimeout(function(){
         $('[data-target="' + id + '"]').closest('li').hide();
       },3100);
-      
+
     });
   }
 
