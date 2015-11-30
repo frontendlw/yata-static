@@ -113,8 +113,9 @@ yata.general = (function() {
       // $('#add-page').trigger('click');
       loadingPage();
       setTimeout(function(){
-        $('.image-empty').addClass('show');
-        $('#page-event').removeClass('hide');
+        // $('#page-eventos.image-empty').removeClass('image-empty');
+        $('#page-eventos').removeClass('hide');
+        $('#menu-event').removeClass('hide');
         $('#option-eventos').removeClass('hide');
         clearFields(el);
       }, config.afterTime)
@@ -241,7 +242,7 @@ yata.general = (function() {
 
 
   function menu(){
-    $('.cs-pages-link').on('click', function(e){
+    $('.test-menu-link').on('click', function(e){
       e.preventDefault();
       var ref = $(this).attr('href');
       $('.test-page').addClass('hide');
@@ -259,6 +260,7 @@ yata.general = (function() {
 
   function addGallery(){
     $('#widget-gallery').on('click', function(){
+      $('.test-page').addClass('hide');
       loadingPage();
       setTimeout(function(){
 
