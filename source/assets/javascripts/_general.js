@@ -101,6 +101,7 @@ yata.general = (function() {
       setTimeout(function(){
         $('.image-empty').addClass('show');
         $('#page-event').removeClass('hide');
+        $('#option-eventos').removeClass('hide');
         clearFields(el);
       },3100)
     });
