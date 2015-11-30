@@ -19,6 +19,7 @@ yata.general = (function() {
     bindClear();
     menu();
     dropListPages();
+    addGallery();
   }
 
 
@@ -247,6 +248,17 @@ yata.general = (function() {
       var ref = $(this).val();
       $('.test-page').addClass('hide');
       $(ref).removeClass('hide')
+    });
+  }
+
+  function addGallery(){
+    $('#widget-gallery').on('click', function(){
+      loadingPage();
+      setTimeout(function(){
+
+        $('#page-gallery').removeClass('hide');
+        
+      },3100);
     });
   }
 
