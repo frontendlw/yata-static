@@ -19,6 +19,12 @@ yata.general = (function() {
     bindClear();
     menu();
     dropListPages();
+    addGallery();
+  }
+
+  var config = {
+    timer: '3000',
+    afterTime: '3100'
   }
 
 
@@ -44,6 +50,14 @@ yata.general = (function() {
       start: function(ev, ui){
         ui.item.show();
         ui.placeholder.append('<span />');
+      },
+      stop: function(){
+
+        loadingPage();
+        setTimeout(function(){
+          $('#page-fale-conosco-invert').removeClass('hide');
+        }, config.afterTime)
+        
       }
     });
     $( '#sortable li' ).disableSelection();
@@ -79,13 +93,13 @@ yata.general = (function() {
   }
 
   function loadingPage(){
-
+    $('.test-page').addClass('hide');
     // $('.cssload-loader').before('<div class="cs-modal-overlay"></div>');
     // $('.image-fake').addClass('hide');
     $('.cssload-loader').addClass('show');
     setTimeout(function(){
       $('.cssload-loader').removeClass('show');
-    },3000)
+    }, config.timer)
   }
 
 
@@ -103,7 +117,7 @@ yata.general = (function() {
         $('#page-event').removeClass('hide');
         $('#option-eventos').removeClass('hide');
         clearFields(el);
-      },3100)
+      }, config.afterTime)
     });
   }
 
@@ -122,11 +136,11 @@ yata.general = (function() {
       if( id == 'cs-sidebar-edit-page-4'){
         setTimeout(function(){
           $('#page-fale-conosco').removeClass('hide');
-        },3100)
+        }, config.afterTime)
       }else{
         setTimeout(function(){
           $('[data-target="#' + id + '"]').closest('li').find('.cs-pages-link').click();
-        },3100)
+        }, config.afterTime)
 
       }
 
@@ -212,7 +226,7 @@ yata.general = (function() {
       setTimeout(function(){
         $('[data-target="' + id + '"]').closest('li').hide();
         $('.image-fake').removeClass('hide').find('img').show();
-      },3100);
+      }, config.afterTime);
 
     });
   }
@@ -239,6 +253,17 @@ yata.general = (function() {
       var ref = $(this).val();
       $('.test-page').addClass('hide');
       $(ref).removeClass('hide')
+    });
+  }
+
+  function addGallery(){
+    $('#widget-gallery').on('click', function(){
+      loadingPage();
+      setTimeout(function(){
+
+        $('#page-gallery').removeClass('hide');
+        
+      }, config.afterTime);
     });
   }
 
