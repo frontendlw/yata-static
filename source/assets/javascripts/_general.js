@@ -18,6 +18,7 @@ yata.general = (function() {
     buttonDelete();
     bindClear();
     menu();
+    dropListPages();
   }
 
 
@@ -227,6 +228,14 @@ yata.general = (function() {
     $('.cs-pages-link').on('click', function(e){
       e.preventDefault();
       var ref = $(this).attr('href');
+      $('.test-page').addClass('hide');
+      $(ref).removeClass('hide')
+    });
+  }
+
+  function dropListPages(){
+    $('#drop-pages').on('change',function(){
+      var ref = $(this).val();
       $('.test-page').addClass('hide');
       $(ref).removeClass('hide')
     });
