@@ -19,18 +19,21 @@
     font-family: Open Sans,Arial,Helvetica,Sans-serif
     font-weight: 400
     color: $colorGray1
-    background: $colorBlack
+    background: $colorBlue4
+    border: 1px solid rgba($colorWhite, 0.22%)
     border-radius: $radiusDefault
     text-shadow: 0 0 5px #000
     max-width: 300px
     min-width: 200px
+    z-index: 1
 
   &:before
     content: ""
     width: 0
     height: 0
-    border-width: 4px
+    border-width: 7px
     border-style: solid
+    z-index: 2
 
   &:hover:after,
   &:focus:after,
@@ -66,12 +69,13 @@
   &:focus:before,
   &:focus:before
     bottom: 70%
-    left: 0
+    left: -10px
     @include transform(scale(1))
 
   &:hover:before,
   &:focus:before
-    left: 9px
+    left: 6px
+    top: -4px
 
 /* Bottom */
 .cs-tooltip-bottom
@@ -88,12 +92,12 @@
   &:hover:before,
   &:focus:before
     top: 70%
-    left: 0
+    left: -10px
 
   &:hover:before,
   &:focus:before
-    left: 9px
-    margin-top: 4px
+    left: 6px
+    top: 16px
 
 /* Right */
 .cs-tooltip-right
@@ -115,6 +119,7 @@
   &:hover:before,
   &:focus:before
     top: 7px
+    left: 18px
 
 /* Left */
 .cs-tooltip-left
@@ -136,4 +141,5 @@
   &:hover:before,
   &:focus:before
     top: 7px
+    right: 18px
 
