@@ -136,6 +136,7 @@ yata.general = (function() {
       if( id == 'cs-sidebar-edit-page-4'){
         setTimeout(function(){
           $('#page-fale-conosco').removeClass('hide');
+          console.log($('#dropList-pages #option-contact').text('Fale Conosco'));
         }, config.afterTime)
       }else{
         setTimeout(function(){
@@ -249,7 +250,7 @@ yata.general = (function() {
   }
 
   function dropListPages(){
-    $('#drop-pages').on('change',function(){
+    $('#dropList-pages').on('change',function(){
       var ref = $(this).val();
       $('.test-page').addClass('hide');
       $(ref).removeClass('hide')
