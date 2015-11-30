@@ -22,6 +22,11 @@ yata.general = (function() {
     addGallery();
   }
 
+  var config = {
+    timer: '3000',
+    afterTime: '3100'
+  }
+
 
   function toggleLabelPopover(){
     $('#ember590 label').on('click', function(){
@@ -51,7 +56,7 @@ yata.general = (function() {
         loadingPage();
         setTimeout(function(){
           $('#page-fale-conosco-invert').removeClass('hide');
-        },3100)
+        }, config.afterTime)
         
       }
     });
@@ -94,7 +99,7 @@ yata.general = (function() {
     $('.cssload-loader').addClass('show');
     setTimeout(function(){
       $('.cssload-loader').removeClass('show');
-    },3000)
+    }, config.timer)
   }
 
 
@@ -112,7 +117,7 @@ yata.general = (function() {
         $('#page-event').removeClass('hide');
         $('#option-eventos').removeClass('hide');
         clearFields(el);
-      },3100)
+      }, config.afterTime)
     });
   }
 
@@ -131,11 +136,11 @@ yata.general = (function() {
       if( id == 'cs-sidebar-edit-page-4'){
         setTimeout(function(){
           $('#page-fale-conosco').removeClass('hide');
-        },3100)
+        }, config.afterTime)
       }else{
         setTimeout(function(){
           $('[data-target="#' + id + '"]').closest('li').find('.cs-pages-link').click();
-        },3100)
+        }, config.afterTime)
 
       }
 
@@ -221,7 +226,7 @@ yata.general = (function() {
       setTimeout(function(){
         $('[data-target="' + id + '"]').closest('li').hide();
         $('.image-fake').removeClass('hide').find('img').show();
-      },3100);
+      }, config.afterTime);
 
     });
   }
@@ -258,7 +263,7 @@ yata.general = (function() {
 
         $('#page-gallery').removeClass('hide');
         
-      },3100);
+      }, config.afterTime);
     });
   }
 
