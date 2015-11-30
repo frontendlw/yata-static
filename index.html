@@ -29,17 +29,16 @@
     <div class="cs-custom-select cs-lang">
       <select class="ls-select">
         <option value="1">pt_BR</option>
-        <option value="1">pt_BR</option>
-        <option value="1">pt_BR</option>
-        <option value="1">pt_BR</option>
       </select>
     </div>
 
-    <div class="cs-custom-select-auto">
-      <select class="ls-select">
-        <option value="1">Home </option>
-        <option value="1">Quem somos</option>
-        <option value="1">Contato</option>
+    <div class="cs-custom-select-auto" >
+      <select class="ls-select" id="drop-pages">
+        <option value="#page-home">Home </option>
+        <option value="#page-sobre">Sobre</option>
+        <option value="#page-clientes">Clientes</option>
+        <option value="#page-contato">Contato</option>
+        <option id="option-eventos" value="#page-eventos" class="hide">Eventos</option>
       </select>
     </div>
 
@@ -57,7 +56,7 @@
     <div class="cs-dropdown cs-dropdown-pos-right">
       <a href="" title="" class="cs-btn"></a>
       <ul>
-        <li><a href="" title="">Titulo do site</a></li>
+        <li><a href="" title="" data-module="modal" data-target="modal-title">Titulo do site</a></li>
         <li><a href="" title="" data-module="modal" data-target="modal-google">Aparecer no Google</a></li>
         <li><a href="" title="">Meus sites</a></li>
         <li class="cs-dropdown-featured"><a href="" title="">Sair da edição</a></li>
@@ -94,17 +93,17 @@
   <main class="cs-main">
 
     <sidebar id="ember527" class="ember-view cs-sidebar">
-  <input type="radio" id="cs-sidebar-nav-elements" name="cs-sidebar-nav" >
+  <input type="radio" id="cs-sidebar-nav-elements" name="cs-sidebar-nav" checked="checked" >
   <label for="cs-sidebar-nav-elements" title="Incluir elementos" class="cs-tab-label cs-ico-block">elementos</label>
   <input type="radio" id="cs-sidebar-nav-appearance" name="cs-sidebar-nav" >
   <label for="cs-sidebar-nav-appearance" title="Editar aparência" class="cs-tab-label cs-ico-apparence">aparência</label>
-  <input type="radio" id="cs-sidebar-nav-pages" name="cs-sidebar-nav" checked="checked">
+  <input type="radio" id="cs-sidebar-nav-pages" name="cs-sidebar-nav" >
   <label for="cs-sidebar-nav-pages" title="Configurar páginas" class="cs-tab-label cs-ico-pages">páginas</label>
 
 
 
   <div id="ember536" class="ember-view cs-sidebar-nav-option cs-sidebar-nav-elements cs-widgets-group">
- <p>Click e arraste para a área de edição</p>
+ <p>Clique e arraste para a área de edição.</p>
 
   <div id="ember553a" data-kind="text" class="cs-ico-text ember-view cs-sidebar-widget ui-draggable ui-draggable-handle">Texto
   </div>
@@ -133,8 +132,7 @@
 </div>
 
   <div id="ember561" class="ember-view cs-sidebar-nav-option cs-sidebar-nav-appearance">
-  <p>Configure Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et </p>
+  <p>Defina a aparência de todo o site, escolha fontes e cores.</p>
   <!-- <a href="#" class="cs-btn-primary cs-btn-center">Editar CSS </a> -->
   <form action="">
     <h2 class="cs-title">Fundo do Site</h2>
@@ -142,7 +140,7 @@
       <div class="cs-label">
         <div class="cs-dropdown-secondary cs-dropdown-background">
           <a href="#" class="cs-btn">
-            <img src="http://www.mycutegraphics.com/backgrounds/summer/th-popsicle-background.gif" alt="">
+            <img src="http://frontendlw.github.io/yata-static/assets/images/bg.png" alt="Background">
           </a>
           <ul class="cs-list">
             <li>
@@ -152,7 +150,7 @@
             </li>
             <li>
               <a href="javascript:;">
-                <img src="http://www.mycutegraphics.com/backgrounds/summer/th-popsicle-background.gif" alt="">
+                <img src="http://frontendlw.github.io/yata-static/assets/images/bg.png" alt="Background">
               </a>
             </li>
             <li>
@@ -445,7 +443,7 @@
 </div>
 
   <div id="ember590" class="ember-view cs-sidebar-nav-option cs-sidebar-nav-pages">
-  <p>Configure páginas existentes, adicione páginas novas ou altere itens do menu.</p>
+  <p>Configure páginas e itens do menu.</p>
 
   <label for="cs-sidebar-new-page" id="add-page" class="cs-btn-primary cs-btn-center">Adicionar página</label>
   <label for="cs-sidebar-new-link" class="cs-btn-secondary cs-btn-center">Adicionar link externo</label>
@@ -453,33 +451,36 @@
   <div id="ember607" class="ember-view cs-pages-list ui-sortable">
     <ul class="cs-list-pages" id="sortable">
       <li id="ember725" data-id="-K1f9iG2xc7bDOgNP6I2" class="ember-view ui-state-disabled cs-pages-list-item">
-          <a id="ember726" href="" class="cs-pages-link ember-view"><span class="cs-ico-home"></span>Home</a>
+          <a id="ember726" href="#page-home" class="cs-pages-link ember-view"><span class="cs-ico-home"></span>
+            <span class="menu">Home</span></a>
           <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
           <a href="" class="cs-ico-config" title="Configurar página" data-target="#cs-sidebar-edit-page-1"></a>
       </li>
       <li id="ember617" data-id="-K1KYuAfIAnz5bLr3zE6" class="ember-view ui-state-default cs-pages-list-item ">
-          <a id="ember618" href="" class="cs-pages-link ember-view"><span class="cs-ico-drag"></span>Sobre</a>
+        <a id="ember618" href="#page-sobre" class="cs-pages-link ember-view"><span class="cs-ico-drag"></span><span class="menu">Sobre</span></a>
           <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
           <a href="" class="cs-ico-config" title="Configurar página" data-target="#cs-sidebar-edit-page-2"></a>
       </li>
       </li>
       <li id="ember755" data-id="-K1d75cfq5d9qvWUQYX4"  class="ember-view ui-state-default cs-pages-list-item">
-          <a id="ember756" href="" class="cs-pages-link ember-view"><span class="cs-ico-drag"></span>Clientes</a>
+        <a id="ember756" href="#page-clientes" class="cs-pages-link ember-view"><span class="cs-ico-drag"></span><span class="menu">Clientes</span></a>
           <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
           <a href="" class="cs-ico-config" title="Configurar página" data-target="#cs-sidebar-edit-page-3"></a>
       </li>
       <li id="ember752" data-id="-K1aNA0KHHNAxOdse4Oj" class="ember-view ui-state-default cs-pages-list-item">
-          <a id="ember753" href="" class="cs-pages-link ember-view"><span class="cs-ico-drag"></span>Contato</a>
+        <a id="ember753" href="#page-contato" class="cs-pages-link ember-view"><span class="cs-ico-drag"></span><span class="menu">Contato</span></a>
           <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
           <a href="" class="cs-ico-config" title="Configurar página" data-target="#cs-sidebar-edit-page-4"></a>
       </li>
       <li id="page-event" data-id="-K1aNA0KHHNAxOdse4Oj" class="ember-view ui-state-default cs-pages-list-item hide">
-          <a id="ember753" href="" class="cs-pages-link ember-view"><span class="cs-ico-drag"></span>Eventos</a>
+        <a id="ember753" href="#page-eventos" class="cs-pages-link ember-view"><span class="cs-ico-drag"></span><span class="menu">Eventos</span></a>
           <a href="" class="cs-ico-duplicate" title="Duplicar página"></a>
           <a href="" class="cs-ico-config" title="Configurar página" data-target="#cs-sidebar-edit-page-5"></a>
       </li>
     </ul>
   </div>
+
+  <a href="http://4hoo5a.axshare.com/aparecer_no_google.html" class="cs-link">Como aparecer no Google</a>
 </div>
 
 
@@ -766,7 +767,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
   <input type="checkbox" name="cs-sidebar-new-page"  id="cs-sidebar-edit-page-1" data-ember-action="799">
   <div class="cs-sidebar-new-page">
     <span class="cs-sidebar-arrow"></span>
-    <h2 class="cs-sidebar-title">Configurar páginas</h2>
+    <h2 class="cs-sidebar-title">Configurar Página - SEO</h2>
     <p>Lorem ipsum dolor sit amet</p>
 
     <div class="cs-fieldset">
@@ -812,7 +813,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
         </div>
       </label> -->
 
-<!-- 
+<!--
       <div class="cs-group-btn cs-label">
         <label class="cs-text-label" for="show-search-3"><b>Esconder dos buscadores. Google, Bing, Yahoo, etc.</b></label>
         <input type="checkbox" class="cs-check-toggle" id="show-search-3">
@@ -833,7 +834,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
     </div>
 
     <footer class="cs-sidebar-footer">
-      <label class="cs-btn-primary" id="cancel-add-page" for="cs-sidebar-edit-page-1">Salvar</label>
+      <label class="cs-btn-primary confirm-edit-page" id="cancel-add-page" for="cs-sidebar-edit-page-1">Salvar</label>
       <label class="cs-btn" for="cs-sidebar-edit-page-1">Cancelar</label>
     </footer>
 
@@ -844,7 +845,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
   <input type="checkbox" name="cs-sidebar-new-page"  id="cs-sidebar-edit-page-2" data-ember-action="799">
   <div class="cs-sidebar-new-page">
     <span class="cs-sidebar-arrow"></span>
-    <h2 class="cs-sidebar-title">Configurar páginas</h2>
+    <h2 class="cs-sidebar-title">Configurar Página - SEO</h2>
     <p>Lorem ipsum dolor sit amet</p>
 
     <div class="cs-fieldset">
@@ -890,7 +891,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
         </div>
       </label>
 
-<!-- 
+<!--
       <div class="cs-group-btn cs-label">
         <label class="cs-text-label" for="show-search-3"><b>Esconder dos buscadores. Google, Bing, Yahoo, etc.</b></label>
         <input type="checkbox" class="cs-check-toggle" id="show-search-3">
@@ -911,7 +912,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
     </div>
 
     <footer class="cs-sidebar-footer">
-      <label class="cs-btn-primary" id="cancel-add-page" for="cs-sidebar-edit-page-2">Salvar</label>
+      <label class="cs-btn-primary confirm-edit-page" id="cancel-add-page" for="cs-sidebar-edit-page-2">Salvar</label>
       <label class="cs-btn" id="cancel-add-page" for="cs-sidebar-edit-page-2">Cancelar</label>
       <button class="cs-btn-danger" id="delete-page" data-module="modal" data-target="modal-remove-page">Apagar página</button>
     </footer>
@@ -923,7 +924,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
   <input type="checkbox" name="cs-sidebar-new-page"  id="cs-sidebar-edit-page-3" data-ember-action="799">
   <div class="cs-sidebar-new-page">
     <span class="cs-sidebar-arrow"></span>
-    <h2 class="cs-sidebar-title">Configurar páginas</h2>
+    <h2 class="cs-sidebar-title">Configurar Página - SEO</h2>
     <p>Lorem ipsum dolor sit amet</p>
 
     <div class="cs-fieldset">
@@ -969,7 +970,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
         </div>
       </label>
 
-<!-- 
+<!--
       <div class="cs-group-btn cs-label">
         <label class="cs-text-label" for="show-search-3"><b>Esconder dos buscadores. Google, Bing, Yahoo, etc.</b></label>
         <input type="checkbox" class="cs-check-toggle" id="show-search-3">
@@ -990,7 +991,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
     </div>
 
     <footer class="cs-sidebar-footer">
-      <label class="cs-btn-primary" id="cancel-add-page" for="cs-sidebar-edit-page-3">Salvar</label>
+      <label class="cs-btn-primary confirm-edit-page" id="cancel-add-page" for="cs-sidebar-edit-page-3">Salvar</label>
       <label class="cs-btn" id="cancel-add-page" for="cs-sidebar-edit-page-3">Cancelar</label>
       <button class="cs-btn-danger" id="delete-page" data-module="modal" data-target="modal-remove-page">Apagar página</button>
     </footer>
@@ -1002,7 +1003,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
   <input type="checkbox" name="cs-sidebar-new-page"  id="cs-sidebar-edit-page-4" data-ember-action="799">
   <div class="cs-sidebar-new-page">
     <span class="cs-sidebar-arrow"></span>
-    <h2 class="cs-sidebar-title">Configurar páginas</h2>
+    <h2 class="cs-sidebar-title">Configurar Página - SEO</h2>
     <p>Lorem ipsum dolor sit amet</p>
 
     <div class="cs-fieldset">
@@ -1048,7 +1049,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
         </div>
       </label>
 
-<!-- 
+<!--
       <div class="cs-group-btn cs-label">
         <label class="cs-text-label" for="show-search-3"><b>Esconder dos buscadores. Google, Bing, Yahoo, etc.</b></label>
         <input type="checkbox" class="cs-check-toggle" id="show-search-3">
@@ -1069,7 +1070,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
     </div>
 
     <footer class="cs-sidebar-footer">
-      <label class="cs-btn-primary" id="cancel-add-page" for="cs-sidebar-edit-page-4">Salvar</label>
+      <label class="cs-btn-primary confirm-edit-page"  for="cs-sidebar-edit-page-4">Salvar</label>
       <label class="cs-btn" for="cs-sidebar-edit-page-4">Cancelar</label>
       <button class="cs-btn-danger" id="delete-page" data-module="modal" data-target="modal-remove-page">Apagar página</button>
     </footer>
@@ -1081,7 +1082,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
   <input type="checkbox" name="cs-sidebar-new-page"  id="cs-sidebar-edit-page-5" data-ember-action="799">
   <div class="cs-sidebar-new-page">
     <span class="cs-sidebar-arrow"></span>
-    <h2 class="cs-sidebar-title">Configurar páginas</h2>
+    <h2 class="cs-sidebar-title">Configurar Página - SEO</h2>
     <p>Lorem ipsum dolor sit amet</p>
 
     <div class="cs-fieldset">
@@ -1128,7 +1129,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
         </div>
       </label>
 
-<!-- 
+<!--
       <div class="cs-group-btn cs-label">
         <label class="cs-text-label" for="show-search-3"><b>Esconder dos buscadores. Google, Bing, Yahoo, etc.</b></label>
         <input type="checkbox" class="cs-check-toggle" id="show-search-3">
@@ -1149,7 +1150,7 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
     </div>
 
     <footer class="cs-sidebar-footer">
-      <label class="cs-btn-primary" id="cancel-add-page" for="cs-sidebar-edit-page-5">Salvar</label>
+      <label class="cs-btn-primary confirm-edit-page" id="cancel-add-page" for="cs-sidebar-edit-page-5">Salvar</label>
       <label class="cs-btn" for="cs-sidebar-edit-page-5">Cancelar</label>
       <button class="cs-btn-danger" id="delete-page" data-module="modal" data-target="modal-remove-page">Apagar página</button>
     </footer>
@@ -1161,56 +1162,71 @@ Caso tenha mais de uma palavra, separe por hífens. Por exemplo: quem-somos">
 
 
     <div class="cs-page">
-      <div class="image-fake">
-        <img src="http://frontendlw.github.io/yata-static/assets/images/content.jpg" alt="Conteúdo fake">
+
+      <div id="page-home" class="test-page image-fake">
+        <img src="http://frontendlw.github.io/yata-static/assets/images/home.jpg" alt="Conteúdo fake">
       </div>
-      <div class="image-empty">
-        <img src="http://frontendlw.github.io/yata-static/assets/images/content-empty.jpg" alt="Conteúdo fake">
+      <div id="page-sobre" class="test-page hide">
+        <img src="http://frontendlw.github.io/yata-static/assets/images/sobre.jpg" alt="Conteúdo fake">
+      </div>
+      <div id="page-clientes" class="test-page hide">
+        <img src="http://frontendlw.github.io/yata-static/assets/images/clientes.jpg" alt="Conteúdo fake">
+      </div>
+      <div id="page-contato" class="test-page hide">
+        <img src="http://frontendlw.github.io/yata-static/assets/images/contato.jpg" alt="Conteúdo fake">
+      </div>
+      <div id="page-eventos" class="test-page hide image-empty">
+        <img src="http://frontendlw.github.io/yata-static/assets/images/eventos.jpg" alt="Conteúdo fake">
+      </div>
+      <div id="page-fale-conosco" class="test-page hide ">
+        <img src="http://frontendlw.github.io/yata-static/assets/images/fale_conosco.jpg" alt="Conteúdo fake">
       </div>
       <div class="cssload-loader"></div>
     </div>
   </main>
 
 
-<!-- <div class="cs-modal-overlay"></div> -->
 <div class="cs-modal" id="modal-google">
   <header class="cs-modal-header">
-    <h3 class="cs-modal-title">Configurar site</h3>
+    <h3 class="cs-modal-title">Aparecer no Google</h3>
     <a href="#fechar" title="Fechar Modal" data-close="modal" class="cs-ico-close"></a>
   </header>
   <div class="cs-modal-content">
-      <div class="cs-modal-tab">
-        <input type="radio" id="cs-image-tab-send" name="cs-image-tabs" checked="checked">
-        <label for="cs-image-tab-send" class="cs-pointer">Título do site</label>
-        
-        <input type="radio" id="cs-image-tab-my" name="cs-image-tabs">
-        <label for="cs-image-tab-my" class="cs-pointer">Aparecer no Google</label>
-        
-        <div class="cs-image-tabs">
-          <div class="cs-image-tab cs-image-tab-send">
-            <br><br>
-            <p>Evite alterar o título do site com frequência, o Google e outros buscadores utilizam essa informação para encontrar seu site mais facilmente.
+  <br>
+         
+    <p>O Criador de Sites é otimizado para o Google, porém é necessário que você siga também algumas dicas para melhorar ainda mais o posicionamento do seu site nos resultados de busca. Por isso separamos 3 dicas principais para te ajudar nisto.</p>
+    <p><b>Você sabe o que é SEO?</b></p>
+    <p>SEO é um conjunto de técnicas que tem como objetivo tornar os sites mais amigáveis para os sites de busca, são trabalhadas palavras-chave no conteúdo do site, nomenclatura das imagens, títulos e links. Tudo isto para que ele fique melhor posicionado nos resultados de busca e as pessoas o encontrem com mais facilidade.</p>
+    <img src="http://frontendlw.github.io/yata-static/assets/images/configurar_google.jpg" alt="Conteúdo fake">
+    <br><br>
+      
+  </div>
+  <div class="cs-modal-footer">
+    <button data-close="modal" class="cs-btn">Cancelar</button>
+    <button data-close="modal" class="cs-btn-primary">OK</button>
+  </div>
+</div>
+
+
+<!-- <div class="cs-modal-overlay"></div> -->
+<div class="cs-modal" id="modal-title">
+  <header class="cs-modal-header">
+    <h3 class="cs-modal-title">Título do site</h3>
+    <a href="#fechar" title="Fechar Modal" data-close="modal" class="cs-ico-close"></a>
+  </header>
+  <div class="cs-modal-content">
+         
+    <br>
+    <p>Evite alterar o título do site com frequência, o Google e outros buscadores utilizam essa informação para encontrar seu site mais facilmente.
 Este título será exibido nos resultados de busca e na aba do navegador.</p>
 
-              <br>
-              <label class="cs-label-block">
-                <b class="cs-text-label">Título do site</b>
-                <input type="text" id="title-page" class="cs-field" placeholder="Dica: max: 50 caracteres">
-              </label>
-          </div>
-          <div id="tab-seo" class="cs-image-tab cs-image-tab-my">
-            <br><br>
-            <p><b>Você sabe o que é SEO?</b></p>
-            <p>SEO é um conjunto de técnicas que tem como objetivo tornar os sites mais amigáveis para os sites de busca, são trabalhadas palavras-chave no conteúdo do site, nomenclatura das imagens, títulos e links. Tudo isto para que ele fique melhor posicionado nos resultados de busca e as pessoas o encontrem com mais facilidade.</p>
-            <p>O Criador de Sites já é otimizado, porém é necessário que você siga também algumas dicas para melhorar ainda mais o posicionamento do seu site.
-Separamos algumas 3 dicas principais para te ajudar nisto.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repudiandae alias doloremque cumque labore quae cupiditate voluptates aspernatur inventore quis voluptatibus repellendus, ducimus incidunt ipsa, rerum omnis molestiae enim accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repudiandae alias doloremque cumque labore quae cupiditate voluptates aspernatur inventore quis voluptatibus repellendus, ducimus incidunt ipsa, rerum omnis molestiae enim accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repudiandae alias doloremque cumque labore quae cupiditate voluptates aspernatur inventore quis voluptatibus repellendus, ducimus incidunt ipsa, rerum omnis molestiae enim accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repudiandae alias doloremque cumque labore quae cupiditate voluptates aspernatur inventore quis voluptatibus repellendus, ducimus incidunt ipsa, rerum omnis molestiae enim accusamus!</p>
-          </div>
-        </div>
-      </div>
+    <br><br>
+    <label class="cs-label-block">
+      <b class="cs-text-label">Título do site</b>
+      <input type="text" class="cs-field" placeholder="Dica: coloque um nome com até 50 caracteres">
+    </label>
+    <br><br>
+    
   </div>
   <div class="cs-modal-footer">
     <button data-close="modal" class="cs-btn">Cancelar</button>
@@ -1228,6 +1244,7 @@ Separamos algumas 3 dicas principais para te ajudar nisto.</p>
     <button data-close="modal" class="cs-btn">Cancelar</button>
   </div>
 </div>
+
 
 
   
