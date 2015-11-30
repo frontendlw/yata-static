@@ -243,6 +243,7 @@ yata.general = (function() {
 
   function menu(){
     $('.test-menu-link').on('click', function(e){
+      $('input[name="cs-sidebar-new-page"]').removeAttr('checked');
       e.preventDefault();
       var ref = $(this).attr('href');
       $('.test-page').addClass('hide');
