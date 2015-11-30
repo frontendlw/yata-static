@@ -44,6 +44,14 @@ yata.general = (function() {
       start: function(ev, ui){
         ui.item.show();
         ui.placeholder.append('<span />');
+      },
+      stop: function(){
+
+        loadingPage();
+        setTimeout(function(){
+          $('#page-fale-conosco-invert').removeClass('hide');
+        },3100)
+        
       }
     });
     $( '#sortable li' ).disableSelection();
@@ -79,7 +87,7 @@ yata.general = (function() {
   }
 
   function loadingPage(){
-
+    $('.test-page').addClass('hide');
     // $('.cssload-loader').before('<div class="cs-modal-overlay"></div>');
     // $('.image-fake').addClass('hide');
     $('.cssload-loader').addClass('show');
